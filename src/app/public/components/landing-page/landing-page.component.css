@@ -1,0 +1,281 @@
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 6rem;
+  color: black;
+  box-shadow: black 0 0 10px 0;
+  line-height: 6rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+header .nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+header .nav .nav-logo {
+  font-size: 2em;
+}
+header .nav .nav-menu {
+  display: flex;
+  gap: 3rem;
+}
+header .nav .nav-menu .nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+header .nav .nav-menu .nav-btn {
+  background-color: #195fa4;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+  height: 50%;
+  padding: 0 1rem;
+  margin: auto;
+}
+header .nav .nav-menu .nav-btn:hover {
+  background-color: black;
+}
+
+.hero {
+  background-image: url("https://www.2playbook.com/uploads/s1/15/87/4/entrenamiento-virtual-online_14_744x403.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+}
+.hero .hero-content {
+  height: 40rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.hero .hero-content h1 {
+  font-size: 5em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.hero .hero-content p {
+  font-size: 1.5rem;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1;
+}
+
+.plan .plan-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.plan .title{
+    font-size: 3em;
+    padding: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.plan .plan-content .card {
+  max-width: min(30rem, 100%);
+}
+.plan .plan-content .card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.plan .plan-content .card .info {
+  padding: 1.5rem;
+  text-align: center;
+}
+.plan .plan-content .card .btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.plan .plan-content .card .info h2 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.plan .plan-content .card .info p {
+  font-size: 1em;
+  color: #777;
+  width: 70%;
+  letter-spacing: 1px;
+  margin: 0 auto;
+}
+.plan .plan-content .card .info .price {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: 1em;
+}
+.testi .title{
+  font-size: 3em;
+  padding: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.testi .testi-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.testi .testi-content .card {
+  padding: 1rem;
+  max-width: 40rem;
+}
+.testi .testi-content .card .comment {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+.testi .testi-content .card .user {
+  font-size: 1em;
+  color: #777;
+}
+.comment,
+.user {
+  text-align: center;
+}
+
+.contact .title{
+  font-size: 3em;
+  padding: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.contact .contact-content {
+  width: min(50rem, 100%);
+  margin: auto;
+  background-color: #f9f9f9;
+  padding: 4rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact .contact-content .title {
+  padding-bottom: 1rem;
+}
+.contact .contact-content .sub-title {
+  font-size: 1.3em;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #777;
+}
+.contact .contact-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .contact-content form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+.contact .contact-content form input[type="text"],
+.contact .contact-content form input[type="email"],
+.contact .contact-content form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.contact .contact-content form textarea {
+  resize: vertical;
+  height: 150px;
+}
+.contact .contact-content form button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.contact .contact-content form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 7rem;
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 80%;
+  }
+  .nav-btn2 {
+    background-color: #195fa4;
+    color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+    padding: 1rem;
+    margin: auto;
+  }
+  .hero-content {
+    height: 40rem;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+  }
+  .hero h1{
+    font-size: 0.5em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .hero p{
+    font-size: 0.2em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .nav-btn-menu {
+    display: block;
+  }
+  .contact-content {
+    padding: 2rem;
+  }
+  .contact .contact-content {
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 60%;
+  }
+}

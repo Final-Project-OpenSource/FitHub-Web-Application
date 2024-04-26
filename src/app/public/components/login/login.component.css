@@ -1,0 +1,62 @@
+.background-image {
+  background-image: url('https://img.freepik.com/foto-gratis/surtido-plano-deliciosa-comida-brasilena_23-2148739179.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 55vh;
+  position: relative;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.welcome-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.welcome-text p {
+  font-size: 23px;
+  margin-bottom: 10px
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.button-login,
+.button-register{
+  margin: 0 10px 10px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 611px) {
+  .welcome-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+
+  }
+  .welcome-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+}

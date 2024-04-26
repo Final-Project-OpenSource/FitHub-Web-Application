@@ -1,0 +1,121 @@
+<header>
+  <nav class="nav container">
+    <a href="#hero" class="nav-logo">FitHub Pro</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+      <button class="nav-btn" (click)="onLoginClick()">Log In</button>
+    </div>
+
+  </nav>
+</header>
+
+<main class="main">
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Bienvenidos a FitHub Pro</h1>
+        <p>Descubre nuestros planes y sumérgete en el estilo de vida fitness que transformará tu cuerpo y mente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan" id="plans">
+    <div class="container">
+      <h1 class="title">Nutrition Plans</h1>
+      <div class="plan-content">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnFIyPB4BPXEYmsVgsbTc8pe8dHrqGRkVJknmOSw0oUA&s" alt="Test Plan">
+          <div class="info">
+            <h2>Test Plan </h2>
+            <p>Prueba nuestro Test Plan para acceder a planes de nutrición personalizados y rutinas de ejercicio adaptadas antes de comprometerte.
+              ¡Empieza tu viaje hacia un estilo de vida más saludable hoy mismo!
+            </p>
+            <p class="price">Free</p>
+            <a href="#" class="btn">Suscribirse</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://tofuu.getjusto.com/orioneat-local/resized2/3bjeJLfdgtycFnXKN-1200-1200.webp" alt="Monthly Plan">
+          <div class="info">
+            <h2>Monthly Plan</h2>
+            <p>Consigue resultados sostenibles con nuestro Monthly Plan. Accede a planes de nutrición personalizados, entrenadores expertos y seguimiento de progreso.
+              ¡Alcanza tus metas de fitness mes a mes!
+            </p>
+            <p class="price">S/. 30</p>
+            <button href="#" class="btn">Suscribirse</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://thumbs.dreamstime.com/z/annual-plan-planning-yearly-interval-concept-company-product-service-personal-planning-46916252.jpg?w=768" alt="Annual Plan">
+          <div class="info">
+            <h2>Annual Plan</h2>
+            <p>Comprométete con tu bienestar con nuestro Annual Plan. Accede a todos los beneficios de FitHub durante todo el año, desde planes de nutrición personalizados hasta sesiones de entrenamiento virtuales.
+              ¡Haz de tu salud una prioridad y alcanza tus objetivos de fitness de manera consistente!</p>
+            <p class="price">S/. 300</p>
+            <button href="#" class="btn">Suscribirse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testi" id="testimonials">
+    <div class="container">
+      <h1 class="title">User Testimonials</h1>
+      <div class="testi-content">
+        <div class="card">
+          <p class="comment">"Lograré mis objetivos y tendré una buena organización y planes a la hora de entrenar ¡Con FitHub!."</p>
+          <p class="user">- Diego Alomso</p>
+        </div>
+        <div class="card">
+          <p class="comment">"Con los planes de alimentación y tutoría de los entrenadores que ofrece FitHub podré llegar al resultado que necesito en el tiempo que mejor se me acople"</p>
+          <p class="user">- Ana García</p>
+        </div>
+        <div class="card">
+          <p class="comment">"Gracias a FitHub puedo tener más tiempo y organización a la hora de tutorear y trazar planes de nutrición a mis aprendices."</p>
+          <p class="user">- Carlos Martinez</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <h1 class="title">Contact Us!</h1>
+        <h2 class="sub-title">En FitHub, valoramos cada una de tus preguntas, comentarios y sugerencias. Nuestro equipo está aquí para proporcionarte la ayuda que necesitas.<br> ¡No dudes en contactarnos!</h2>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+
+          <label for="telefono">Numero de Teléfono:</label>
+          <input type="text" id="telefono" name="telefono" required>
+
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required>
+
+          <label for="contenido">Contenido:</label>
+          <textarea id="contenido" name="contenido" rows="4" required></textarea>
+
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
+  <p>Dirección: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
+  <p>Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
+</footer>

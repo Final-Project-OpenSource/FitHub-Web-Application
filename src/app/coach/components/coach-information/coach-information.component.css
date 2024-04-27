@@ -1,0 +1,121 @@
+.card-component{
+  display: flex;
+  background: linear-gradient( to bottom right, #4f86f7, #6ab0f3);
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 30px;
+  margin-top: 40px;
+
+}
+
+.color-boton{
+  background-color: #3f51b5;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  min-width: 64px;
+  min-height: 36px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-boton:hover {
+  transform: scale(1.05);
+}
+
+.color-boton:active,
+.color-boton:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+.card-especifico mat-card{
+  width: 90%;
+  align-items: center;
+  background-color: #D6EBFF;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 1.5;margin-top: 20px;
+  border-radius: 20px;
+}
+
+.nombre-contacto{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+
+
+img {
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.nombre-contacto mat-card-header{
+  margin-right: auto;
+  background-color: #D6EBFF;
+  align-items: center;
+  display: flex;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nombre-contacto button{
+  margin-left: 10px;
+
+}
+
+.foto-informacion{
+  background-color: #97B6F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-right: 56px;
+  margin-left: 56px;
+  border-radius: 20px;
+}
+
+.information{
+  padding: 50px;
+  padding-bottom: 20px;
+}
+
+h3{
+  align-items: center;
+  display: flex;
+  padding: 8px;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #D6EBFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nombre-coach{
+  align-items: center;
+  background-color: #D6EBFF;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

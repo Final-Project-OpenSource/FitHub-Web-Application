@@ -7,6 +7,8 @@ import {LandingPageComponent} from "./public/components/landing-page/landing-pag
 import {CoachInformationComponent} from "./coach/components/coach-information/coach-information.component";
 import {CoachContactComponent} from "./coach/components/coach-contact/coach-contact.component";
 
+import { MemberProfileComponent } from "./member/components/member-profile/member-profile.component";
+import { CoachProfileComponent } from "./coach/components/coach-profile/coach-profile.component";
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -16,6 +18,8 @@ export const routes: Routes = [
   {path: 'coach', component: CoachInformationComponent},
   {path: 'contact-coach', component: CoachContactComponent},
 
+  {path: 'member-profile', component: MemberProfileComponent},
+  {path: 'coach-profile', component: CoachProfileComponent},
   {path: '', pathMatch: 'full', component: LandingPageComponent},
   {path: '*', pathMatch: 'full', redirectTo: 'home'}
 ];

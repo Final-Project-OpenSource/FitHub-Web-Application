@@ -90,3 +90,6 @@ mat-card-content {
 .mat-mdc-card-content:last-child {
   padding-bottom: 0;
 }
+.example-card p {
+  line-height: 1
+}

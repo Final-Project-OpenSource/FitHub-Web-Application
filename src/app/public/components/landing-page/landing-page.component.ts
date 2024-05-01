@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import {MatButton} from "@angular/material/button";
 import {MatCard} from "@angular/material/card";
 import {Router} from "@angular/router";
@@ -20,4 +21,20 @@ export class LandingPageComponent {
     this.router.navigate(['login']);
   }
 
+  public sendEmail(e: Event) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_2rucpr5', 'template_iivhm4f', e.target as HTMLFormElement, {
+        publicKey: 'Olwd6HmB58xgNfeFs',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', (error as EmailJSResponseStatus).text);
+        },
+      );
+  }
 }

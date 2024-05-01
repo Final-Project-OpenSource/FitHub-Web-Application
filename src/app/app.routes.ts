@@ -10,6 +10,8 @@ import {CoachContactComponent} from "./coach/components/coach-contact/coach-cont
 import { MemberProfileComponent } from "./member/components/member-profile/member-profile.component";
 import { CoachProfileComponent } from "./coach/components/coach-profile/coach-profile.component";
 
+import { MemberDashboardComponent} from "./member/components/member-dashboard/member-dashboard.component";
+
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
@@ -17,6 +19,8 @@ export const routes: Routes = [
 
   {path: 'coach', component: CoachInformationComponent},
   {path: 'contact-coach', component: CoachContactComponent},
+
+  {path: 'member-dashboard', component: MemberDashboardComponent},
 
   {path: 'member-profile', component: MemberProfileComponent},
   {path: 'coach-profile', component: CoachProfileComponent},

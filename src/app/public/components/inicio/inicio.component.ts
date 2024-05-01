@@ -1,7 +1,14 @@
 import { Component } from '@angular/core';
 import {MatDivider} from "@angular/material/divider";
 import {MatButton} from "@angular/material/button";
-import {MatCard, MatCardContent, MatCardHeader, MatCardTitleGroup} from "@angular/material/card";
+import {
+  MatCard,
+  MatCardActions,
+  MatCardContent,
+  MatCardHeader,
+  MatCardImage, MatCardModule,
+  MatCardTitleGroup
+} from "@angular/material/card";
 
 @Component({
   selector: 'app-inicio',
@@ -12,7 +19,10 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardTitleGroup} from "@angula
     MatCard,
     MatCardHeader,
     MatCardTitleGroup,
-    MatCardContent
+    MatCardModule,
+    MatCardContent,
+    MatCardActions,
+    MatCardImage
   ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'

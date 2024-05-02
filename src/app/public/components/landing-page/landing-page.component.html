@@ -1,3 +1,4 @@
+
 <header>
   <nav class="nav container">
     <a href="#hero" class="nav-logo">FitHub Pro</a>
@@ -89,7 +90,7 @@
       <div class="contact-content">
         <h1 class="title">Contact Us!</h1>
         <h2 class="sub-title">En FitHub, valoramos cada una de tus preguntas, comentarios y sugerencias. Nuestro equipo está aquí para proporcionarte la ayuda que necesitas.<br> ¡No dudes en contactarnos!</h2>
-        <form>
+        <form (submit)="sendEmail($event)">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required>
 
@@ -104,9 +105,7 @@
 
           <label for="contenido">Contenido:</label>
           <textarea id="contenido" name="contenido" rows="4" required></textarea>
-
-
-          <button type="submit" class="btn">Enviar</button>
+         <button type="submit" class="btn">Enviar</button>
         </form>
       </div>
     </div>

@@ -1,0 +1,111 @@
+
+:root{
+  font-family: Inter;
+}
+.background{
+  margin: 2rem 0 2rem 0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil{
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #AAAAAA;
+  border-radius: 25px 25px 0 0;
+}
+.user-info {
+  display: flex; /* Utiliza flexbox para distribuir elementos en una fila */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+.images {
+  display: flex;
+  justify-content: center;
+  width: 30%; /* Establece el ancho de la imagen */
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 2rem;
+}
+.user-icon{
+  width: 50px;
+  height: 50px;
+  margin: 2rem;
+}
+.user-image{
+  width: 100%;
+}
+.user-info .info {
+  width: 70%; /* Establece el ancho del div info */
+  margin: 1rem 2rem 1rem 2rem;
+}
+.info h3{
+  /*border-style: solid;*/
+  background-color: #D9D9D9;
+  border-radius: 25px;
+  font-size: 30px;
+  font-weight: normal;
+  width: fit-content;
+  padding: 0.1rem 1.5rem 0.1rem 1.5rem;
+}
+.info button{
+  background-color: #376eec;
+  border-radius: 25px;
+  font-size: 15px;
+
+}
+.informacion-banner{
+  width: 85%;
+  background-color: #888888;
+}
+
+.informacion-banner h2{
+  margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+  color: white;
+  font-weight: lighter;
+}
+.aditional-info{
+  width: 85%;
+  background-color: #777777;
+  border-radius: 0 0 25px 25px;
+
+}
+
+.routines{
+  display: flex; /* Utiliza flexbox para alinear elementos en una fila */
+  justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+  margin: 2rem;
+  background-color: #D9D9D9;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+.routines h3 {
+  font-weight: lighter;
+  margin: 0 10px; /* Añade un margen a la derecha del h3 para separarlo de las imágenes */
+}
+.routines button{
+  margin: 5px 10px 5px; /* Añade un margen a cada imagen para separarlas */
+}
+.clients{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  background-color: #D9D9D9;
+}
+.clients h3 {
+  top: 0;
+  left: 0;
+  margin: 10px 10px;
+  font-weight: lighter;
+}
+.clients client-info{
+  margin: auto;
+}
+
+
+

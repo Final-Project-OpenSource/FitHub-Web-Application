@@ -1,0 +1,73 @@
+.trainings-card{
+  background-color: #989898;
+  margin: 40px;
+  height: 1150px;
+  border-radius: 30px;
+  display: flex;
+
+}
+
+.trainings-buttons{
+  width: 180px;
+  margin-top: 1.5%;
+  margin-right: 5%;
+  background-color: #3582CF !important;
+  color: white !important;
+  border-radius: 20px;
+}
+
+.trainings-card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons-section{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5%;
+}
+
+.question-box{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5%;
+  width: 600px;
+}
+
+.routines-card-header{
+  background-color: #888888;
+  margin: 40px 40px 0 40px;
+  height: 33px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.routines-card-body{
+  background-color: #777777;
+  margin: 0 40px 20px 40px;
+  height: 950px;
+  display: flex;
+}
+
+.exercise-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Color de fondo de la tarjeta */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra de la tarjeta */
+  transition: 0.3s; /* Efecto de transición al pasar el mouse sobre la tarjeta */
+  width: 70%; /* Ancho de la tarjeta */
+  margin: 0 auto; /* Centrar la tarjeta horizontalmente */
+  border-radius: 5px; /* Bordes redondeados de la tarjeta */
+  padding: 20px; /* Espacio interior de la tarjeta */
+}
+
+
+.exercise-cards {
+  flex: 1 0 20%; /* Esto hará que las tarjetas ocupen aproximadamente 1/4 del ancho del contenedor, ajustándose según sea necesario */
+  margin: 1%; /* Pequeño margen para dar espacio entre las tarjetas */
+}

@@ -1,0 +1,46 @@
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+  <a routerLink="/member-dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+  </a>
+  <a routerLink="/member-profile">
+    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  </a>
+</header>
+
+<div class="background">
+  <div class="container">
+    <div class="perfil">
+      <div class="user-info">
+        <div class="images">
+          <img class="user-icon" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt="icono representando al usuario">
+          <img class="user-image" src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" alt="imagen del usurio">
+        </div>
+        <div class="info">
+          <h3> Perfil </h3>
+          <h3> - ID - </h3>
+          <h3> Marcelo </h3>
+          <h3> Ribas </h3>
+          <button mat-button (click)="onLandingPageClick()"> Cerrar Sesion </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="informacion-banner"> <h2> Informacion </h2></div>
+
+    <div class="aditional-info">
+      <div class="achivements">
+        <h3> Logros obtenidos </h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/188/188906.png" alt="icono del trofeo #1">
+        <img src="https://cdn-icons-png.flaticon.com/512/432/432544.png" alt="icono del trofeo #2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3791/3791606.png" alt="icono del trofeo #3">
+      </div>
+      <div class="record">
+        <h3> Historial </h3>
+        <button mat-button> Rutina 1</button>
+        <button mat-button> Rutina 2</button>
+        <button mat-button> Rutina 3</button>
+      </div>
+    </div>
+  </div>
+</div>

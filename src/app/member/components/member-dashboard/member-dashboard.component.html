@@ -1,0 +1,86 @@
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+  <h1 style="margin-left: 3%; margin-top: 1%" >FitHub Pro</h1>
+  <a routerLink="/member-profile">
+    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  </a>
+</header>
+
+<div style="display: flex; justify-content: space-between">
+  <p style="margin-top: 4%;margin-left: 3%; font-size: 30px">¡Cada repetición te acerca a tus metas!</p>
+  <p style="margin-top: 2%; margin-right: 5%;font-size: 30px">
+    <img src="assets/images/member/member-days-count.png" alt="member-days" style="width: 90px; height: 90px; align-self: flex-end;">Vas 3 dias seguidos de entrenamiento
+  </p>
+</div>
+
+<div class="sections" style="background-color: #616161; color: white; display: flex; justify-content: space-between; padding: 50px;">
+  <mat-card class="sections-card">
+    <p style="font-size: 25px"> Entrenamientos  </p>
+    <button mat-raised-button class="sections-button" routerLink="/member-trainings" > Seguir </button>
+  </mat-card>
+  <mat-card class="sections-card">
+    <p style="font-size: 25px"> Notas de tu Coach </p>
+    <button mat-raised-button class="sections-button"> Ver </button>
+  </mat-card>
+  <mat-card class="sections-card" >
+    <p style="font-size: 25px">Tus Objetivos Diarios</p>
+    <button mat-raised-button class="sections-button"> Comenzar </button>
+  </mat-card>
+</div>
+
+<div>
+  <h2 style="margin-top: 1%;margin-left: 3%; font-size: 30px">Notificaciones</h2>
+  <mat-card class="notifications-card">
+
+    <mat-card class="member-notification">
+      <p style="font-size: 25px;">¡No olvides tu rutina de hoy!</p>
+      <p style="font-size: 20px">Recuerda que hoy es el dia de trabajar piernas</p>
+    </mat-card>
+
+    <mat-card class="member-notification">
+      <p style="font-size: 25px">Nuevo mensaje:</p>
+      <p style="font-size: 20px;margin-right: 3%; margin-left: 3%">Viendo tu avance, te recomiendo que realices más días ejercicios de piernas y cumplas con la meta nutricional que se te proporcionó</p>
+    </mat-card>
+
+    <mat-card class="member-notification">
+      <p style="font-size: 25px">¡No olvides tu dieta de hoy!</p>
+      <p style="font-size: 20px">  Sigue las recomendaciones del día, gracias por usar FitHub Pro </p>
+    </mat-card>
+
+  </mat-card>
+</div>
+
+<style>
+  .sections-card {
+    width: 500px;
+    height: 120px;
+    border: 2px solid white;
+    background-color: #757575;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sections-button{
+    background-color: #3582CF !important;
+    color: white !important;
+  }
+  .notifications-card{
+    width: 80%;
+    height: 450px;
+    margin-left: 10%;
+    align-items: center;
+    background-color: #D9D9D9;
+  }
+  .member-notification{
+    margin-top: 3%;
+    width: 45%;
+    height: 100px;
+    border: 6px solid white;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+</style>

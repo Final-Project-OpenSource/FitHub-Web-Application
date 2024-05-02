@@ -4,18 +4,20 @@ import {MatOption, MatSelect} from "@angular/material/select";
 import {MatInput} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
 import {MatLabel} from "@angular/material/form-field";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-coach-contact',
   standalone: true,
-  imports: [
-    MatFormField,
-    MatInput,
-    MatButton,
-    MatOption,
-    MatSelect,
-    MatLabel
-  ],
+    imports: [
+        MatFormField,
+        MatInput,
+        MatButton,
+        MatOption,
+        MatSelect,
+        MatLabel,
+        RouterLink
+    ],
   templateUrl: './coach-contact.component.html',
   styleUrl: './coach-contact.component.css'
 })

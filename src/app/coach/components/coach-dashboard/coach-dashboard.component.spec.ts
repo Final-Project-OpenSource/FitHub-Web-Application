@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InicioComponent } from './inicio.component';
+import { CoachDashboardComponent } from './coach-dashboard.component';
 
-describe('InicioComponent', () => {
-  let component: InicioComponent;
-  let fixture: ComponentFixture<InicioComponent>;
+describe('MemberDashboardComponent', () => {
+  let component: CoachDashboardComponent;
+  let fixture: ComponentFixture<CoachDashboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InicioComponent]
+      imports: [CoachDashboardComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(InicioComponent);
+
+    fixture = TestBed.createComponent(CoachDashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

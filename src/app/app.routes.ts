@@ -12,10 +12,8 @@ export const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'recovery-password', component: RecoveryPasswordComponent},
-
   {path: 'coach', component: CoachInformationComponent},
   {path: 'contact-coach', component: CoachContactComponent},
-
   {path: '', pathMatch: 'full', component: LandingPageComponent},
   {path: '*', pathMatch: 'full', redirectTo: 'home'}
 ];

@@ -1,0 +1,40 @@
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+  <a routerLink="/coach-dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+  </a>
+  <a routerLink="/coach-profile">
+    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  </a>
+</header>
+<div style="background: #F2F4FF; padding: 2% 3% 2% 3%">
+  <h1 style="font-size: 350%; margin: 0 0 0 4%">Clientes</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="members-section">
+  <h2 style="color: white; margin-left: 2%">Miembros Actuales</h2>
+  <div class="horizontal-scroll">
+    <mat-card *ngFor="let member of members" class="member-card">
+      <mat-card-title >{{ member.name }}</mat-card-title>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="manageMember(member.id)">Administrar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="requests-section">
+  <h2 style="color: white; margin-left: 2%">Solicitudes</h2>
+  <div class="horizontal-scroll">
+    <mat-card *ngFor="let request of requests" class="request-card">
+      <mat-card-title>{{ request.name }}</mat-card-title>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="acceptRequest(request.id)">Aceptar</button>
+        <button mat-button color="warn" (click)="rejectRequest(request.id)">Rechazar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

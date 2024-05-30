@@ -13,6 +13,8 @@ import { CoachProfileComponent } from "./coach/components/coach-profile/coach-pr
 
 import { MemberDashboardComponent} from "./member/components/member-dashboard/member-dashboard.component";
 import { MemberTrainingsComponent} from "./member/components/member-trainings/member-trainings.component";
+import {CoachMemberListComponent} from "./coach/components/coach-member-list/coach-member-list.component";
+import {CoachPlansComponent} from "./coach/components/coach-plans/coach-plans.component";
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -28,6 +30,8 @@ export const routes: Routes = [
   {path: 'member-profile', component: MemberProfileComponent},
   {path: 'coach-profile', component: CoachProfileComponent},
   {path: 'coach-progress', component: CoachProgressComponent},
+  {path: 'coach-member-list', component: CoachMemberListComponent},
+  {path: 'coach-plans', component: CoachPlansComponent},
   {path: '', pathMatch: 'full', component: LandingPageComponent},
   {path: '*', pathMatch: 'full', redirectTo: 'home'}
 ];

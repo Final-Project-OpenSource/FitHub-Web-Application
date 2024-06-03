@@ -1,0 +1,305 @@
+{
+  "users":[
+    {
+      "id": 1,
+      "firstname": "Juan",
+      "lastname": "Perez",
+      "age": 28,
+      "phone": "+5112345678",
+      "direction": "Av. Arequipa 123, Lima, Perú"
+    },
+    {
+      "id": 2,
+      "firstname": "María",
+      "lastname": "González",
+      "age": 35,
+      "phone": "+5119876543",
+      "direction": "Jr. Huancayo 456, Lima, Perú"
+    },
+    {
+      "id": 3,
+      "firstname": "Carlos",
+      "lastname": "López",
+      "age": 40,
+      "phone": "+5187654321",
+      "direction": "Av. Tacna 789, Lima, Perú"
+    },
+    {
+      "id": 4,
+      "firstname": "Luz",
+      "lastname": "Ramírez",
+      "age": 22,
+      "phone": "+5143216789",
+      "direction": "Av. Amazonas 321, Lima, Perú"
+    },
+    {
+      "id": 5,
+      "firstname": "Pedro",
+      "lastname": "Flores",
+      "age": 29,
+      "phone": "+5156789342",
+      "direction": "Calle Moquegua 234, Lima, Perú"
+    },
+    {
+      "id": 6,
+      "firstname": "Ana",
+      "lastname": "Chávez",
+      "age": 45,
+      "phone": "+5178945623",
+      "direction": "Jr. Tumbes 567, Lima, Perú"
+    },
+    {
+      "id": 7,
+      "firstname": "Diego",
+      "lastname": "Díaz",
+      "age": 33,
+      "phone": "+5123456789",
+      "direction": "Av. Huancavelica 890, Lima, Perú"
+    },
+    {
+      "id": 8,
+      "firstname": "Elena",
+      "lastname": "Mendoza",
+      "age": 27,
+      "phone": "+5198765432",
+      "direction": "Jr. Lambayeque 456, Lima, Perú"
+    },
+    {
+      "id": 9,
+      "firstname": "Miguel",
+      "lastname": "Vargas",
+      "age": 31,
+      "phone": "+5145678901",
+      "direction": "Calle Cajamarca 678, Lima, Perú"
+    },
+    {
+      "id": 10,
+      "firstname": "Fabiola",
+      "lastname": "Torres",
+      "age": 37,
+      "phone": "+5178945623",
+      "direction": "Av. Piura 123, Lima, Perú"
+    }
+  ],
+  "chats": [
+    {
+      "id": 1,
+      "userid1": 1,
+      "userid2": 2
+    },
+    {
+      "id": 2,
+      "userid1": 2,
+      "userid2": 3
+    },
+    {
+      "id": 3,
+      "userid1": 1,
+      "userid2": 4
+    },
+    {
+      "id": 4,
+      "userid1": 3,
+      "userid2": 4
+    },
+    {
+      "id": 5,
+      "userid1": 2,
+      "userid2": 5
+    },
+    {
+      "id": 6,
+      "userid1": 4,
+      "userid2": 5
+    },
+    {
+      "id": 7,
+      "userid1": 1,
+      "userid2": 3
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "chatid": 1,
+      "senderuserid": 1,
+      "receivinguserid": 2,
+      "message": "¡Hola María! ¿Cómo te fue con los ejercicios hoy?",
+      "date": "2024-05-31",
+      "time": "10:00 AM"
+    },
+    {
+      "id": 2,
+      "chatid": 2,
+      "senderuserid": 2,
+      "receivinguserid": 3,
+      "message": "Hola Carlos, ¿qué me recomiendas para mejorar mi resistencia?",
+      "date": "2024-05-31",
+      "time": "11:00 AM"
+    },
+    {
+      "id": 3,
+      "chatid": 3,
+      "senderuserid": 1,
+      "receivinguserid": 4,
+      "message": "¡Hola Luz! ¿Cómo te sientes después de la sesión de entrenamiento de ayer?",
+      "date": "2024-05-31",
+      "time": "2:00 PM"
+    },
+    {
+      "id": 4,
+      "chatid": 4,
+      "senderuserid": 3,
+      "receivinguserid": 4,
+      "message": "Hola Luz, recuerda mantener una buena hidratación durante tus entrenamientos.",
+      "date": "2024-05-31",
+      "time": "3:00 PM"
+    },
+    {
+      "id": 5,
+      "chatid": 5,
+      "senderuserid": 2,
+      "receivinguserid": 5,
+      "message": "Pedro, ¿cómo te fue con la rutina de ejercicios de esta semana?",
+      "date": "2024-05-31",
+      "time": "4:00 PM"
+    },
+    {
+      "id": 6,
+      "chatid": 6,
+      "senderuserid": 4,
+      "receivinguserid": 5,
+      "message": "Pedro, es importante que te enfoques en tu técnica durante los ejercicios de fuerza.",
+      "date": "2024-05-31",
+      "time": "5:00 PM"
+    },
+    {
+      "id": 7,
+      "chatid": 7,
+      "senderuserid": 1,
+      "receivinguserid": 3,
+      "message": "Carlos, ¿cuál es la mejor manera de mejorar la flexibilidad?",
+      "date": "2024-05-31",
+      "time": "6:00 PM"
+    },
+    {
+      "id": 8,
+      "chatid": 1,
+      "senderuserid": 2,
+      "receivinguserid": 1,
+      "message": "¡Hola Juan! Los ejercicios estuvieron geniales, ¡gracias por tu ayuda!",
+      "date": "2024-05-31",
+      "time": "10:05 AM"
+    },
+    {
+      "id": 9,
+      "chatid": 2,
+      "senderuserid": 3,
+      "receivinguserid": 2,
+      "message": "María, te recomiendo incluir más entrenamientos de resistencia aeróbica en tu rutina.",
+      "date": "2024-05-31",
+      "time": "11:10 AM"
+    },
+    {
+      "id": 10,
+      "chatid": 3,
+      "senderuserid": 4,
+      "receivinguserid": 1,
+      "message": "¡Hola Juan! Me siento genial, ¡gracias por preguntar!",
+      "date": "2024-05-31",
+      "time": "2:15 PM"
+    },
+    {
+      "id": 11,
+      "chatid": 4,
+      "senderuserid": 4,
+      "receivinguserid": 3,
+      "message": "Gracias Carlos, lo tendré en cuenta.",
+      "date": "2024-05-31",
+      "time": "3:10 PM"
+    },
+    {
+      "id": 12,
+      "chatid": 5,
+      "senderuserid": 5,
+      "receivinguserid": 2,
+      "message": "María, los ejercicios fueron desafiantes pero me siento bien.",
+      "date": "2024-05-31",
+      "time": "4:15 PM"
+    },
+    {
+      "id": 13,
+      "chatid": 6,
+      "senderuserid": 5,
+      "receivinguserid": 4,
+      "message": "Lo tendré en cuenta, gracias Luz.",
+      "date": "2024-05-31",
+      "time": "5:10 PM"
+    },
+    {
+      "id": 14,
+      "chatid": 7,
+      "senderuserid": 3,
+      "receivinguserid": 1,
+      "message": "Juan, te recomendaría incluir ejercicios de estiramientos dinámicos en tu rutina.",
+      "date": "2024-05-31",
+      "time": "6:15 PM"
+    },
+    {
+      "id": 15,
+      "chatid": 1,
+      "senderuserid": 2,
+      "receivinguserid": 6,
+      "message": "Ana, ¿cómo te sientes después del entrenamiento de hoy?",
+      "date": "2024-05-31",
+      "time": "7:00 PM"
+    },
+    {
+      "id": 16,
+      "chatid": 2,
+      "senderuserid": 6,
+      "receivinguserid": 2,
+      "message": "Me siento agotada pero satisfecha, gracias María.",
+      "date": "2024-05-31",
+      "time": "7:15 PM"
+    },
+    {
+      "id": 17,
+      "chatid": 3,
+      "senderuserid": 3,
+      "receivinguserid": 7,
+      "message": "Diego, ¿cómo va tu progreso con los ejercicios de fuerza?",
+      "date": "2024-05-31",
+      "time": "8:00 PM"
+    },
+    {
+      "id": 18,
+      "chatid": 4,
+      "senderuserid": 7,
+      "receivinguserid": 3,
+      "message": "Carlos, me siento más fuerte y veo resultados, ¡gracias por tus consejos!",
+      "date": "2024-05-31",
+      "time": "8:10 PM"
+    },
+    {
+      "id": 19,
+      "chatid": 5,
+      "senderuserid": 4,
+      "receivinguserid": 8,
+      "message": "Elena, ¿cómo va tu motivación para mantener la rutina de ejercicios?",
+      "date": "2024-05-31",
+      "time": "9:00 PM"
+    },
+    {
+      "id": 20,
+      "chatid": 6,
+      "senderuserid": 8,
+      "receivinguserid": 4,
+      "message": "Luz, me mantengo motivada recordando mis objetivos, gracias por preguntar.",
+      "date": "2024-05-31",
+      "time": "9:15 PM"
+    }
+  ]
+
+
+}

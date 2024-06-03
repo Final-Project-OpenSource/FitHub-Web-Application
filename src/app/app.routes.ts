@@ -14,6 +14,8 @@ import { CoachProfileComponent } from "./coach/components/coach-profile/coach-pr
 import { MemberDashboardComponent} from "./member/components/member-dashboard/member-dashboard.component";
 import { MemberTrainingsComponent} from "./member/components/member-trainings/member-trainings.component";
 
+import {ComponentChatComponent} from "./shared/components/component-chat/component-chat.component";
+
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
@@ -28,6 +30,7 @@ export const routes: Routes = [
   {path: 'member-profile', component: MemberProfileComponent},
   {path: 'coach-profile', component: CoachProfileComponent},
   {path: 'coach-progress', component: CoachProgressComponent},
+  {path: 'chat', component:ComponentChatComponent},
   {path: '', pathMatch: 'full', component: LandingPageComponent},
   {path: '*', pathMatch: 'full', redirectTo: 'home'}
 ];

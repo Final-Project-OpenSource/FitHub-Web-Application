@@ -15,6 +15,7 @@ import { MemberDashboardComponent} from "./member/components/member-dashboard/me
 import { MemberTrainingsComponent} from "./member/components/member-trainings/member-trainings.component";
 import {CoachMemberListComponent} from "./coach/components/coach-member-list/coach-member-list.component";
 import {CoachPlansComponent} from "./coach/components/coach-plans/coach-plans.component";
+import {CoachNutritionComponent} from "./coach/components/coach-nutrition/coach-nutrition.component";
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -32,6 +33,7 @@ export const routes: Routes = [
   {path: 'coach-progress', component: CoachProgressComponent},
   {path: 'coach-member-list', component: CoachMemberListComponent},
   {path: 'coach-plans', component: CoachPlansComponent},
+  {path: 'coach-nutrition-plan', component: CoachNutritionComponent},
   {path: '', pathMatch: 'full', component: LandingPageComponent},
   {path: '*', pathMatch: 'full', redirectTo: 'home'}
 ];

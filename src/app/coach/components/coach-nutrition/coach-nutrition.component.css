@@ -1,0 +1,27 @@
+.nutritions-container {
+  margin: 1rem;
+}
+
+.nutrition-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nutrition-card {
+  flex: 1 1 calc(33% - 1rem);
+  min-width: 250px;
+  background-color: #EDF2F4;
+  border: 10px solid white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  align-self: flex-start;
+}

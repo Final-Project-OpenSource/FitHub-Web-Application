@@ -1,0 +1,63 @@
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+  <a routerLink="/coach-dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+  </a>
+  <a routerLink="/coach-profile">
+    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  </a>
+</header>
+<div style="background: #F2F4FF; padding: 2% 3% 2% 3%">
+  <h1 style="font-size: 350%; margin: 0 0 0 4%">Plan de Nutrición</h1>
+</div>
+
+<div class="nutritions-container">
+  <h2 style="background: #A9D3FF; color: white">Mis Planes de Nutrición</h2>
+  <div class="nutrition-cards">
+    <mat-card *ngFor="let nutrition of nutritionPlan" class="nutrition-card">
+      <mat-card-title style="margin-left: 5%">{{ nutrition.title }}</mat-card-title>
+      <mat-card-subtitle style="margin-left: 5%">{{ nutrition.photo }}</mat-card-subtitle>
+      <mat-card-content>
+        <p style="margin-left: 3%">{{ nutrition.description }}</p>
+        <p style="margin-left: 3%">{{ nutrition.ingredients }}</p>
+        <p style="margin-left: 3%"> Calories: {{ nutrition.calories }}</p>
+        <p style="margin-left: 3%"> Goal: {{ nutrition.goal_health }}</p>
+      </mat-card-content>
+      <mat-card-actions style="margin-left: 40%">
+        <button mat-button color="primary" (click)="editNutritionPlan(nutrition)">Editar</button>
+        <button mat-button color="warn" (click)="deleteNutritionPlan(nutrition.id)">Eliminar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h2 style="background: #A9D3FF; color: white">Crear Nuevo Plan de Nutrición</h2>
+  <form [formGroup]="nutritionForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="description" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ingredientes</mat-label>
+      <textarea matInput formControlName="ingredients" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Calorias</mat-label>
+      <textarea matInput formControlName="calories" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Meta de Salud</mat-label>
+      <textarea matInput formControlName="goal_health" required></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Crear Rutina</button>
+  </form>
+</div>

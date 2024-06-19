@@ -27,25 +27,17 @@ body {
 
 /* Sección de frases */
 .sentence {
-  line-height: 1.5;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.sentence .sentence-text-left {
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-left: 3%;
-  font-size: 30px;
-}
-
-.sentence .sentence-text-right {
-  margin-top: 2%;
-  margin-right: 5%;
-  font-size: 30px;
-  display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.sentence .sentence-text-center {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 30px;
+  text-align: center;
 }
 
 .sentence .member-days-count {
@@ -102,13 +94,13 @@ body {
 }
 
 .notifications-card {
-  color: white;
   width: 80%;
   height: auto;
   margin-left: 10%;
   align-items: center;
   background-color: #A9D3FF;
   padding: 20px 0;
+  color : white;
 }
 
 .member-notification {

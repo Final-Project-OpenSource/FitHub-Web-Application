@@ -1,0 +1,54 @@
+<div class="top-bar">
+  <button mat-button class="return" (click)="goBack()"> Retroceder </button>
+</div>
+
+<div class="container">
+  <div class="chat-list">
+    <div class="search-input">
+      <mat-form-field>
+        <input matInput placeholder="Buscar usuario..." [formControl]="searchControl" [matAutocomplete]="users">
+      </mat-form-field>
+      <mat-autocomplete #users="matAutocomplete">
+        <mat-option *ngFor="let user of chatsUsers" [value]="user.firstname+user.lastname">
+          {{user?.firstname}} {{user?.lastname}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-selection-list [multiple]="false" [formControl]="chatListControl">
+        <div mat-subheader>Chats<br><br></div>
+        <mat-divider></mat-divider>
+        <mat-list-option *ngFor="let user of chatsUsers; let i = index" [value]="user.id">
+          <div matListItemTitle (click)="setCurrentChat(user, i); getMessagebyCurrentChat()">
+            {{ user?.firstname }} {{ user?.lastname }}
+          </div>
+        </mat-list-option>
+        <mat-divider></mat-divider>
+      </mat-selection-list>
+    </div>
+
+  </div>
+  <div class="messages">
+    <div class="messages-header">
+      <!--<h1> {{currentChat}}</h1>--> <h2 >{{currentChatUser}}</h2>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="chat-area">
+      <mat-list *ngFor="let message of chatsMessages" class="chat-bubble-container">
+        <div matListItemTitle class="chat-bubble">
+          {{message.message}}
+          <span class="chat-date">{{message.date}} {{message.time}}</span>
+        </div>
+      </mat-list>
+
+    </div>
+    <div class="input-area">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Ingresa tu mensaje"/>
+        <button mat-icon-button matSuffix>
+          <mat-icon>send</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+

@@ -16,13 +16,13 @@ import {CoachPlansComponent} from "./coach/components/coach-plans/coach-plans.co
 import {CoachNutritionComponent} from "./coach/components/coach-nutrition/coach-nutrition.component";
 import {ComponentChatComponent} from "./shared/components/component-chat/component-chat.component";
 
+
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'recovery-password', component: RecoveryPasswordComponent},
-
   {path: 'member-dashboard', component: MemberDashboardComponent},
-  {path: 'coach', component: CoachInformationComponent},
+  {path: 'search/coach', component: CoachInformationComponent},
   {path: 'contact-coach', component: CoachContactComponent},
   {path: 'member-trainings', component: MemberTrainingsComponent},
   {path: 'member-profile', component: MemberProfileComponent},

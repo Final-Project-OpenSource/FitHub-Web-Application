@@ -1,9 +1,9 @@
-<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
-  <a routerLink="/member-dashboard">
-    <img src="assets/images/icons/back-icon.png" alt="back-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+<header class="header">
+  <a routerLink="/member-dashboard" aria-label="Back to Dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="Back" class="header-icon">
   </a>
-  <a routerLink="/member-profile">
-    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  <a routerLink="/member-profile" aria-label="Go to Profile">
+    <img src="assets/images/member/member-icon.png" alt="Profile" class="header-icon">
   </a>
 </header>
 
@@ -11,33 +11,27 @@
   <mat-card class="training-card">
     <section class="training-card-header">
       <div class="question-box">
-        <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-left: 5%; margin-right: 5%">
-        <button mat-raised-button style="margin-top: 1%">¿Qué rutina vas a seguir hoy?</button>
+        <img src="assets/images/member/member-icon.png" alt="Member Icon" class="question-icon">
+        <button mat-raised-button class="routine-button">¿Qué rutina vas a seguir hoy?</button>
       </div>
 
       <div class="buttons-section">
-        <button mat-raised-button class="training-buttons">
-          <a (click)="showDiets()" style="text-decoration: none; color: white;">Dietas</a>
-        </button>
-        <button mat-raised-button class="training-buttons">
-          <a (click)="showRoutines()" style="text-decoration: none; color: white;">Rutinas</a>
-        </button>
-        <button mat-raised-button class="training-buttons">
-          <a routerLink="/search/coach" style="text-decoration: none; color: white;">Profesionales</a>
-        </button>
+        <button mat-raised-button class="training-buttons" (click)="showRoutines()">Ejercicios</button>
+        <a mat-raised-button class="training-buttons" routerLink="/search/coach" role="button">Profesionales</a>
+        <button mat-raised-button class="training-buttons" (click)="showDiets()">Dietas</button>
       </div>
     </section>
 
     <mat-card class="trainings-card-header">
-      <h2 style="margin-left: 3%">Resultados</h2>
+      <h2 class="results-title">Resultados</h2>
     </mat-card>
     <mat-card class="trainings-card-body">
       <div *ngIf="view === 'diets'">
         <div *ngFor="let diet of diets; trackBy: trackByDiet">
           <mat-card class="training-cards">
-            <div style="display: flex;align-items: center">
-              <img src="{{diet.photo}}" alt="" style="height: 80px; width: 100px; margin-left: 2%">
-              <div style="margin-left: 2%">
+            <div class="card-content">
+              <img [src]="diet.photo" alt="{{diet.title}}" class="card-image">
+              <div class="card-details">
                 <h2>{{diet.title}}</h2>
                 <h3>Calories: {{diet.calories}}</h3>
                 <p>{{diet.description}}</p>
@@ -52,9 +46,9 @@
       <div *ngIf="view === 'routines'">
         <div *ngFor="let routine of routines; trackBy: trackByRoutine">
           <mat-card class="training-cards">
-            <div style="display: flex;align-items: center">
-              <img src="{{routine.photo}}" alt="" style="height: 80px; width: 100px; margin-left: 2%">
-              <div style="margin-left: 2%">
+            <div class="card-content">
+              <img [src]="routine.photo" alt="{{routine.name}}" class="card-image">
+              <div class="card-details">
                 <h2>{{routine.name}}</h2>
                 <h3>Exercise: {{routine.exercise}}</h3>
                 <h3>Repetitions: {{routine.repetitions}}</h3>
@@ -69,7 +63,7 @@
 </div>
 
 <footer class="footer">
-  <p style="margin-left: 15%">&copy; 2024 FitHub Pro - All rights reserved</p>
+  <p>&copy; 2024 FitHub Pro - All rights reserved</p>
   <p>Address: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
-  <p style="margin-right: 15%">Phone: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
+  <p>Phone: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
 </footer>

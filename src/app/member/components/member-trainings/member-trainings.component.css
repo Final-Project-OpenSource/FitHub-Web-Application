@@ -1,7 +1,33 @@
+/* styles.css */
+
+/* General Styles */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+.header {
+  background-color: #4c5a5b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 15%;
+}
+
+/* Content Styles */
 .content {
   min-height: calc(100vh - 120px); /* Adjust based on header and footer height */
   display: flex;
   flex-direction: column;
+  background-color: #E0EAFD; /* Soft blue */
+  padding: 20px;
 }
 
 .training-card {
@@ -10,6 +36,7 @@
   border-radius: 30px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .training-buttons {
@@ -40,6 +67,19 @@
   width: 600px;
 }
 
+.question-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.routine-button {
+  background-color: #4D8ED6 !important;
+  color: white !important;
+  border-radius: 20px;
+  padding: 10px;
+}
+
 .trainings-card-header {
   background-color: #C2D4F7; /* Light blue */
   margin: 40px 40px 0 40px;
@@ -47,6 +87,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .trainings-card-body {
@@ -54,6 +97,8 @@
   margin: 0 40px 20px 40px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .training-cards {
@@ -62,8 +107,33 @@
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #4D8ED6; /* Border blue */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  height: 80px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-details {
+  margin-left: 2%;
+}
+
+.card-details h2,
+.card-details h3 {
+  margin: 5px 0;
+}
+
+/* Footer Styles */
 .footer {
   background-color: #333333;
   color: white;
@@ -75,4 +145,8 @@
   box-sizing: border-box;
   position: relative;
   bottom: 0;
+}
+
+.footer p {
+  margin: 5px;
 }

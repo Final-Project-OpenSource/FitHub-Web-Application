@@ -1,3 +1,19 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F4F4F4;
+}
+
+.header {
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
 .content {
   min-height: calc(100vh - 120px); /* Adjust based on header and footer height */
   display: flex;
@@ -64,6 +80,23 @@
   border: 1px solid #4D8ED6; /* Border blue */
 }
 
+.card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically on small screens */
+}
+
+.card-image {
+  height: 80px;
+  width: 100px;
+  margin: 10px 0;
+}
+
+.card-text {
+  text-align: center;
+  margin: 10px 0;
+}
+
 .footer {
   background-color: #333333;
   color: white;
@@ -75,4 +108,53 @@
   box-sizing: border-box;
   position: relative;
   bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .training-card-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question-box {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card-content {
+    flex-direction: column;
+  }
+
+  .trainings-card-header,
+  .trainings-card-body {
+    margin: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .training-buttons {
+    width: 150px;
+  }
+
+  .card-text h2,
+  .card-text h3,
+  .card-text p {
+    font-size: 14px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
 }

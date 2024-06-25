@@ -14,4 +14,8 @@ export class MessagesService {
   getMessagebyChatId(index: any) {
     return this.http.get<any>(`${this.baseUrl}/messages?chatid=${index}`);
   }
+
+  sendMessage(content: string): Observable<any> {
+    return this.http.post<any>(this.baseUrl, { content });
+  }
 }

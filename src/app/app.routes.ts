@@ -15,6 +15,7 @@ import {CoachMemberListComponent} from "./coach/components/coach-member-list/coa
 import {CoachPlansComponent} from "./coach/components/coach-plans/coach-plans.component";
 import {CoachNutritionComponent} from "./coach/components/coach-nutrition/coach-nutrition.component";
 import {ComponentChatComponent} from "./shared/components/component-chat/component-chat.component";
+import {MemberProgressComponent} from "./member/components/member-progress/member-progress.component";
 
 
 export const routes: Routes = [
@@ -26,6 +27,7 @@ export const routes: Routes = [
   {path: 'contact-coach', component: CoachContactComponent},
   {path: 'member-trainings', component: MemberTrainingsComponent},
   {path: 'member-profile', component: MemberProfileComponent},
+  {path: 'member-progress', component: MemberProgressComponent},
 
   {path: 'coach-dashboard', component: CoachDashboardComponent},
   {path: 'coach-profile', component: CoachProfileComponent},

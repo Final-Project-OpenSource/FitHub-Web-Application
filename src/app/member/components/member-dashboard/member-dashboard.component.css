@@ -21,14 +21,20 @@ body {
   font-size: 1.5rem;
 }
 
-.header .member-icon {
-  width: 50px;
-  height: 50px;
+.header .icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .member-icon,
+.header .chat-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
 }
 
 /* Sección de frases */
 .sentence {
-  line-height: 1.5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,8 +49,8 @@ body {
 }
 
 .sentence .member-days-count {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   margin-right: 10px;
 }
 
@@ -60,8 +66,8 @@ body {
 }
 
 .sections-card {
-  width: calc(50% - 20px);
-  max-width: 400px;
+  width: calc(33% - 20px);
+  max-width: 300px;
   height: auto;
   border: 2px solid white;
   background-color: #93ACB5;
@@ -91,7 +97,6 @@ body {
 
 /* Notificaciones */
 .section-notifications {
-  line-height: 1.5;
   background: #F2F4FF;
   padding: 30px 0;
 }
@@ -168,7 +173,8 @@ body {
     margin: 10px 0;
   }
 
-  .header .member-icon {
+  .header .member-icon,
+  .header .chat-icon {
     margin: 10px 0;
   }
 

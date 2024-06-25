@@ -1,0 +1,114 @@
+h1 {
+  padding: 20px;
+  padding-left: 80px;
+  margin-top: 30px;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #A9D3FF;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: auto;
+  padding-bottom: 30px;
+  margin-top: 40px;
+}
+
+.name {
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+mat-card-content {
+  margin-bottom: 10px;
+}
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #93ACB5;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.message {
+  margin-right: 5px;
+  padding: 10px;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+
+.date {
+  margin-left: 0;
+  padding: 10px;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+
+.button {
+  padding-left: 90%;
+}
+
+.color-boton {
+  background-color: #3f51b5;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  min-width: 64px;
+  min-height: 36px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-boton:hover {
+  transform: scale(1.05);
+}
+
+.color-boton:active,
+.color-boton:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .card {
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .message,
+  .date {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .button {
+    padding-left: 80%;
+  }
+}

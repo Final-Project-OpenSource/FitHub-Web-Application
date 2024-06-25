@@ -2,22 +2,27 @@
   <div class="welcome-text">
     <h1>Bienvenidos a FitHub Pro</h1>
     <p>Descubre nuestros planes y sumérgete en el estilo<br>
-    de vida fitness que transformará tu cuerpo y mente</p>
+      de vida fitness que transformará tu cuerpo y mente</p>
   </div>
 </div>
 <div class="login-container">
-  <mat-form-field appearance="fill">
-    <input matInput placeholder="Usuario" type="email">
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <input matInput placeholder="Contraseña" type="password">
-  </mat-form-field>
-  <div class="button-container">
-
-    <a routerLink="/member-dashboard">
-      <button mat-raised-button color="primary" class="button-login">Ingresar</button>
-    </a>
-    <button mat-raised-button color="accent" class="button-register" (click)="onRegisterClick()">Registrar</button>
-  </div>
-  <button mat-button color="primary" class="forgot-password" (click)="onRecoveryPasswordClick()">¿Olvidaste tu contraseña?</button>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Correo electrónico" formControlName="email" type="email">
+      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Correo es requerido</mat-error>
+      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Correo inválido</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Contraseña" formControlName="password" type="password">
+      <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Contraseña es requerida</mat-error>
+      <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Contraseña debe tener al menos 6 caracteres</mat-error>
+    </mat-form-field>
+    <div class="button-container">
+      <button mat-raised-button color="primary" class="button-login" type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+      <button mat-raised-button color="accent" class="button-register" type="button" (click)="onRegisterClick()">Registrar</button>
+    </div>
+    <div class="forgot-password">
+      <button mat-button color="primary" type="button" (click)="onRecoveryPasswordClick()">¿Olvidaste tu contraseña?</button>
+    </div>
+  </form>
 </div>

@@ -1,17 +1,29 @@
-.card-component{
+.search-container {
   display: flex;
-  background: linear-gradient( to bottom right, #4f86f7, #6ab0f3);
+  justify-content: center;
+  margin: 20px;
+}
+
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.card-component {
+  display: flex;
+  background: linear-gradient(to bottom right, #E0EAFD, #C2D4F7); /* Blue gradient */
   border-radius: 20px;
   padding: 10px;
   max-width: 80%;
   margin: auto;
   padding-bottom: 30px;
   margin-top: 40px;
-
 }
 
-.color-boton{
-  background-color: #3f51b5;
+.color-boton {
+  background-color: #4D8ED6; /* Blue */
   color: white;
   justify-content: center;
   align-items: center;
@@ -41,36 +53,34 @@
   color: rgba(0, 0, 0, 0.87);
 }
 
-
-.card-especifico mat-card{
+.card-especifico mat-card {
   width: 90%;
   align-items: center;
-  background-color: #D6EBFF;
+  background-color: #EDF2F7; /* Light blue */
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
   font-size: 20px;
-  line-height: 1.5;margin-top: 20px;
+  line-height: 1.5;
+  margin-top: 20px;
   border-radius: 20px;
 }
 
-.nombre-contacto{
+.nombre-contacto {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
 }
 
-
-
 img {
   margin-right: 10px;
   border-radius: 20px;
 }
 
-.nombre-contacto mat-card-header{
+.nombre-contacto mat-card-header {
   margin-right: auto;
-  background-color: #D6EBFF;
+  background-color: #C2D4F7; /* Light blue */
   align-items: center;
   display: flex;
   padding-bottom: 10px;
@@ -79,13 +89,12 @@ img {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.nombre-contacto button{
+.nombre-contacto button {
   margin-left: 10px;
-
 }
 
-.foto-informacion{
-  background-color: #97B6F3;
+.foto-informacion {
+  background-color: #A6BDE6; /* Mid-tone blue */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,27 +104,102 @@ img {
   border-radius: 20px;
 }
 
-.information{
+.information {
   padding: 50px;
   padding-bottom: 20px;
 }
 
-h3{
+h3 {
   align-items: center;
   display: flex;
   padding: 8px;
   border-radius: 20px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #D6EBFF;
+  background-color: #C2D4F7; /* Light blue */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.nombre-coach{
+.nombre-coach {
   align-items: center;
-  background-color: #D6EBFF;
+  background-color: #C2D4F7; /* Light blue */
   display: flex;
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .card-component {
+    max-width: 100%;
+    padding: 5px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .color-boton {
+    min-width: auto;
+    min-height: auto;
+    font-size: 12px;
+  }
+
+  .card-especifico mat-card {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .nombre-contacto img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nombre-contacto button {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+
+  .foto-informacion {
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .information {
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nombre-coach {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+/* Asegura que el contenedor principal llene la ventana */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+}
+
+/* Asegura que el contenido principal llene el espacio restante */
+.content-container {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: auto; /* Empuja el footer al final del contenedor */
 }

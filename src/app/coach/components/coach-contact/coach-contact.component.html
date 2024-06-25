@@ -1,5 +1,5 @@
 <header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
-  <a routerLink="/coach">
+  <a routerLink="/search/coach">
     <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
   </a>
   <a routerLink="/member-profile">
@@ -11,22 +11,14 @@
   <div class="register-container">
     <div class="register-form">
       <h2 class="title">Contacta al Coach</h2>
-      <h2>Nombre Completo </h2>
       <mat-form-field appearance="fill">
         <input matInput placeholder="Nombre Completo" type="text">
       </mat-form-field>
-      <h2>Correo Electrónico </h2>
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Correo Electrónico" type="password">
+        <input matInput placeholder="Teléfono" type="tel">
       </mat-form-field>
-      <h2>Teléfono</h2>
-      <mat-form-field appearance="fill">
-        <input matInput placeholder="Teléfono" type="email">
-      </mat-form-field>
-      <h2>Mensaje </h2>
       <mat-form-field class="example-full-width">
-        <mat-label>Mensaje</mat-label>
-        <textarea matInput placeholder="Ejemplo: Buenas tardes..."></textarea>
+        <textarea matInput placeholder="Ejemplo: Quiero ser su cliente..."></textarea>
       </mat-form-field>
       <button mat-raised-button color="primary">  Enviar Formulario  </button>
     </div>

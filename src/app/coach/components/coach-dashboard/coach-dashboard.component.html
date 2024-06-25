@@ -1,0 +1,58 @@
+<header class="header">
+  <h1>FitHub Pro</h1>
+  <div class="icon-container">
+    <a routerLink="/coach-profile">
+      <img src="assets/images/member/member-icon.png" alt="coach-icon" class="member-icon">
+    </a>
+    <a routerLink="/chat">
+      <img src="assets/images/icons/chat-icon.png" alt="chat-icon" class="chat-icon">
+    </a>
+  </div>
+</header>
+
+<div class="sentence">
+  <p class="sentence-text-center">¡Portal del Entrenador!</p>
+</div>
+
+<div class="sections">
+  <mat-card class="sections-card">
+    <p>Rutinas</p>
+    <button mat-raised-button class="sections-button" routerLink="/coach-plans">Administrar</button>
+  </mat-card>
+  <mat-card class="sections-card">
+    <p>Clientes</p>
+    <button mat-raised-button class="sections-button" routerLink="/coach-member-list">Ver</button>
+  </mat-card>
+  <mat-card class="sections-card">
+    <p>Progreso</p>
+    <button mat-raised-button class="sections-button" routerLink="/coach-progress">Administrar</button>
+  </mat-card>
+</div>
+
+<div class="section-notifications">
+  <h2 class="notifications-title">Notificaciones</h2>
+  <mat-card class="notifications-card">
+
+    <mat-card class="member-notification">
+      <p class="notification-title">¡Solicitud de Nueva Rutina de Entrenamiento!</p>
+      <p class="notification-content">¡Hola Coach! Luis Galindo ha solicitado una nueva rutina de entrenamiento. Revisa sus objetivos y crea un plan personalizado para él/ella.</p>
+    </mat-card>
+
+    <mat-card class="member-notification">
+      <p class="notification-title">Luis Galindo ha Completado su Rutina</p>
+      <p class="notification-content">¡Felicidades! Luis Galindo ha completado su rutina de entrenamiento. Puedes revisar su desempeño y ajustar su próximo plan de entrenamiento si es necesario.</p>
+    </mat-card>
+
+    <mat-card class="member-notification">
+      <p class="notification-title"> Nuevo Mensaje de Luis Galindo</p>
+      <p class="notification-content">¡Hola Coach! Has recibido un nuevo mensaje de Luis Galindo. Lee el mensaje y responde lo antes posible para mantener una buena comunicación.</p>
+    </mat-card>
+
+  </mat-card>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
+  <p>Dirección: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
+  <p>Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
+</footer>

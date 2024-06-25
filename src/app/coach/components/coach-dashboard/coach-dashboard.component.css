@@ -1,0 +1,235 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+.header {
+  background-color: #6C756B;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header h1 {
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+.header .member-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 15%;
+  margin-right: 10px;
+}
+
+.header .chat-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 15%;
+}
+
+/* Sección de frases */
+.sentence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sentence .sentence-text-center {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sentence .member-days-count {
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+}
+
+/* Secciones */
+.sections {
+  background-color: #A9D3FF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.sections-card {
+  width: 100%;
+  max-width: 500px;
+  height: 120px;
+  border: 2px solid white;
+  background-color: #93ACB5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  text-align: center;
+  margin: 1rem;
+}
+
+.sections-card p {
+  font-size: 25px;
+}
+
+.sections-button {
+  background-color: #3582CF !important;
+  color: white !important;
+}
+
+/* Notificaciones */
+.section-notifications {
+  line-height: 1.5;
+  background: #F2F4FF;
+}
+
+.notifications-title {
+  margin-top: 1%;
+  margin-left: 3%;
+  font-size: 30px;
+}
+
+.notifications-card {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  align-items: center;
+  background-color: #A9D3FF;
+  padding: 20px 0;
+  color : white;
+}
+
+.member-notification {
+  margin-top: 3%;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border: 6px solid white;
+  background-color: #93ACB5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 10px;
+}
+
+.member-notification .notification-title {
+  font-size: 25px;
+}
+
+.member-notification .notification-content {
+  font-size: 20px;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 2%;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer p:nth-child(1) {
+  margin-left: 15%;
+}
+
+.footer p:nth-child(3) {
+  margin-right: 15%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header .member-icon {
+    margin-top: 10px;
+  }
+
+  .sentence {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sentence .sentence-text-left,
+  .sentence .sentence-text-right {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .notifications-card {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer p {
+    margin: 5px 0;
+  }
+
+  .footer p:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .footer p:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sentence .sentence-text-left,
+  .sentence .sentence-text-right {
+    font-size: 20px;
+  }
+
+  .sections-card p {
+    font-size: 20px;
+  }
+
+  .notifications-title {
+    font-size: 24px;
+  }
+
+  .member-notification .notification-title {
+    font-size: 20px;
+  }
+
+  .member-notification .notification-content {
+    font-size: 16px;
+  }
+}

@@ -1,60 +1,69 @@
-
-<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
-  <a routerLink="/member-dashboard">
-    <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+<header class="header">
+  <a routerLink="/member-dashboard" aria-label="Back to Dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="Back" class="header-icon">
   </a>
-  <a routerLink="/member-profile">
-    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  <a routerLink="/member-profile" aria-label="Go to Profile">
+    <img src="assets/images/member/member-icon.png" alt="Profile" class="header-icon">
   </a>
 </header>
 
-<div>
-  <mat-card class="trainings-card">
+<div class="content">
+  <mat-card class="training-card">
+    <section class="training-card-header">
+      <div class="question-box">
+        <img src="assets/images/member/member-icon.png" alt="Member Icon" class="question-icon">
+        <button mat-raised-button class="routine-button">¿Qué rutina vas a seguir hoy?</button>
+      </div>
 
-    <section class="trainings-card-header">
-    <div class="question-box">
-      <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-left: 5%; margin-right: 5%">
-      <button mat-raised-button style="margin-top: 1%" >¿Qué Rutina vas a seguir hoy?</button>
-    </div>
-
-    <div class="buttons-section">
-      <button mat-raised-button class="trainings-buttons" >
-        <a routerLink="/member-trainings">
-          <p style="margin-top: 15% !important;">Ejercicios</p>
-        </a>
-      </button>
-      <button mat-raised-button class="trainings-buttons" >
-        <a routerLink="/coach">
-          <p style="margin-top: 15% !important;">Profesionales</p>
-        </a>
-      </button>
-      <button mat-raised-button class="trainings-buttons" >Dietas</button>
-    </div>
+      <div class="buttons-section">
+        <button mat-raised-button class="training-buttons" (click)="showRoutines()">Ejercicios</button>
+        <a mat-raised-button class="training-buttons" routerLink="/search/coach" role="button">Profesionales</a>
+        <button mat-raised-button class="training-buttons" (click)="showDiets()">Dietas</button>
+      </div>
     </section>
 
-    <mat-card class="routines-card-header">
-      <h2 style="margin-left: 3%">Resultados</h2>
+    <mat-card class="trainings-card-header">
+      <h2 class="results-title">Resultados</h2>
     </mat-card>
-    <mat-card class="routines-card-body">
-
-      <div *ngFor="let rutinas of routines">
-        <div class="exercise-cards" *ngFor="let ejercicio of rutinas.ejercicios">
-          <mat-card style="border-radius: 15px; border-color: #3f51b5 !important;">
-            <div style="display: flex;align-items: center">
-              <img src="{{ejercicio.image}}" alt="" style="height: 80px; width: 100px; margin-left: 2%">
-              <h2 style="margin-left: 1%">{{rutinas.name}} - {{ejercicio.name}}</h2>
-              <p style="margin: 3%;">{{ejercicio.description}} </p>
+    <mat-card class="trainings-card-body">
+      <div *ngIf="view === 'diets'">
+        <div *ngFor="let diet of diets; trackBy: trackByDiet">
+          <mat-card class="training-cards">
+            <div class="card-content">
+              <img [src]="diet.photo" alt="{{diet.title}}" class="card-image">
+              <div class="card-details">
+                <h2>{{diet.title}}</h2>
+                <h3>Calories: {{diet.calories}}</h3>
+                <p>{{diet.description}}</p>
+                <p>Ingredients: {{diet.ingredients}}</p>
+                <p>Restrictions: {{diet.restrictions}}</p>
+                <p>Health Goal: {{diet.goal_health}}</p>
+              </div>
             </div>
           </mat-card>
         </div>
       </div>
-
+      <div *ngIf="view === 'routines'">
+        <div *ngFor="let routine of routines; trackBy: trackByRoutine">
+          <mat-card class="training-cards">
+            <div class="card-content">
+              <img [src]="routine.photo" alt="{{routine.name}}" class="card-image">
+              <div class="card-details">
+                <h2>{{routine.name}}</h2>
+                <h3>Exercise: {{routine.exercise}}</h3>
+                <h3>Repetitions: {{routine.repetitions}}</h3>
+                <p>{{routine.instruction}}</p>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
     </mat-card>
   </mat-card>
 </div>
 
-<footer style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
-  <p style="margin-left: 15%">&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
-  <p>Dirección: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
-  <p style="margin-right: 15%">Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
+<footer class="footer">
+  <p>&copy; 2024 FitHub Pro - All rights reserved</p>
+  <p>Address: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
+  <p>Phone: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
 </footer>

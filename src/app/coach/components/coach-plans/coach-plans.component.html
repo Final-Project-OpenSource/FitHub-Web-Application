@@ -1,0 +1,54 @@
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+  <a routerLink="/coach-dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+  </a>
+  <a routerLink="/coach-profile">
+    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  </a>
+</header>
+<div style="background: #F2F4FF; padding: 2% 3% 2% 3%">
+  <h1 style="font-size: 350%; margin: 0 0 0 4%">Rutinas</h1>
+</div>
+
+<div class="routines-container">
+  <h2 style="background: #A9D3FF; color: white">Mis Rutinas</h2>
+  <div class="routine-cards">
+    <mat-card *ngFor="let routine of routines" class="routine-card">
+      <mat-card-title style="margin-left: 5%">{{ routine.title }}</mat-card-title>
+      <mat-card-subtitle style="margin-left: 5%">{{ routine.difficulty }}</mat-card-subtitle>
+      <mat-card-content>
+        <p style="margin-left: 3%">{{ routine.description }}</p>
+      </mat-card-content>
+      <mat-card-actions style="margin-left: 40%">
+        <button mat-button color="primary" (click)="editRoutine(routine)">Editar</button>
+        <button mat-button color="warn" (click)="deleteRoutine(routine.id)">Eliminar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h2 style="background: #A9D3FF; color: white">Crear Nueva Rutina</h2>
+  <form [formGroup]="routineForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Dificultad</mat-label>
+      <mat-select formControlName="difficulty" required>
+        <mat-option value="Easy">Easy</mat-option>
+        <mat-option value="Medium">Medium</mat-option>
+        <mat-option value="Intense">Intense</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="description" required></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Crear Rutina</button>
+  </form>
+</div>

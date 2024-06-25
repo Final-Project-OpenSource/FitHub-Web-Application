@@ -1,73 +1,152 @@
-.trainings-card{
-  background-color: #989898;
-  margin: 40px;
-  height: 1150px;
-  border-radius: 30px;
-  display: flex;
+/* styles.css */
 
+/* General Styles */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
 }
 
-.trainings-buttons{
+/* Header Styles */
+.header {
+  background-color: #4c5a5b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 15%;
+}
+
+/* Content Styles */
+.content {
+  min-height: calc(100vh - 120px); /* Adjust based on header and footer height */
+  display: flex;
+  flex-direction: column;
+  background-color: #E0EAFD; /* Soft blue */
+  padding: 20px;
+}
+
+.training-card {
+  background-color: #E0EAFD; /* Soft blue */
+  margin: 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.training-buttons {
   width: 180px;
   margin-top: 1.5%;
   margin-right: 5%;
-  background-color: #3582CF !important;
+  background-color: #4D8ED6 !important; /* Blue button */
   color: white !important;
   border-radius: 20px;
 }
 
-.trainings-card-header{
+.training-card-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.buttons-section{
+.buttons-section {
   display: flex;
   flex-direction: row;
   margin-top: 1.5%;
 }
 
-.question-box{
+.question-box {
   display: flex;
   flex-direction: row;
   margin-top: 1.5%;
   width: 600px;
 }
 
-.routines-card-header{
-  background-color: #888888;
+.question-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.routine-button {
+  background-color: #4D8ED6 !important;
+  color: white !important;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.trainings-card-header {
+  background-color: #C2D4F7; /* Light blue */
   margin: 40px 40px 0 40px;
   height: 33px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.routines-card-body{
-  background-color: #777777;
-  margin: 0 40px 20px 40px;
-  height: 950px;
-  display: flex;
-}
-
-.exercise-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  background-color: #fff; /* Color de fondo de la tarjeta */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra de la tarjeta */
-  transition: 0.3s; /* Efecto de transición al pasar el mouse sobre la tarjeta */
-  width: 70%; /* Ancho de la tarjeta */
-  margin: 0 auto; /* Centrar la tarjeta horizontalmente */
-  border-radius: 5px; /* Bordes redondeados de la tarjeta */
-  padding: 20px; /* Espacio interior de la tarjeta */
+  padding: 10px;
+  border-radius: 20px;
 }
 
+.trainings-card-body {
+  background-color: #A6BDE6; /* Mid-tone blue */
+  margin: 0 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+}
 
-.exercise-cards {
-  flex: 1 0 20%; /* Esto hará que las tarjetas ocupen aproximadamente 1/4 del ancho del contenedor, ajustándose según sea necesario */
-  margin: 1%; /* Pequeño margen para dar espacio entre las tarjetas */
+.training-cards {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #4D8ED6; /* Border blue */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  height: 80px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-details {
+  margin-left: 2%;
+}
+
+.card-details h2,
+.card-details h3 {
+  margin: 5px 0;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+}
+
+.footer p {
+  margin: 5px;
 }

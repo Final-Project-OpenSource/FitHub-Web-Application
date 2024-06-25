@@ -1,37 +1,43 @@
-<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
-  <a routerLink="/member-trainings">
-    <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
-  </a>
-  <a routerLink="/member-profile">
-    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
-  </a>
-</header>
-
-<mat-card class="card-component">
-  <div class="nombre-contacto">
-    <img src="assets/entrenador.png" alt="" width="50" height="50">
-    <mat-card-header>Coach</mat-card-header>
-    <a routerLink="/contact-coach">
-    <button class="color-boton">Contactar</button>
+<div class="main-container">
+  <header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+    <a routerLink="/member-trainings">
+      <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
     </a>
-  </div>
-  <div class="foto-informacion">
-    <img src="https://i.pinimg.com/originals/22/b1/bd/22b1bd193966a3f59f88ff3c6865cb21.jpg" alt="Foto de perfil de coach" width="250" height="300">
-    <div class="information">
-      <h3 class="nombre-coach">Valentina Sofia Lopez Vergara</h3>
-      <h3>Especialización: Tonificación Muscular</h3>
-      <h3>Localización: Lima - Perú</h3>
-      <h3>Teléfono: 980 479 651</h3>
-      <h3>Edad: 26</h3>
-    </div>
-  </div>
-  <div class="card-especifico">
-    <mat-card >Al inscribirse con un coach especialista en tonificación muscular, un alumno puede esperar un enfoque personalizado y profesional que incluye evaluación inicial, planificación de entrenamiento específico para tonificar los músculos, orientación nutricional, supervisión durante las sesiones de ejercicio y seguimiento regular para ajustar el programa según el progreso. Este enfoque integral busca optimizar el desarrollo de fuerza, resistencia y definición muscular, adaptándose a las metas individuales del alumno y promoviendo un estilo de vida saludable y activo.</mat-card>
-  </div>
-</mat-card>
+    <a routerLink="/member-profile">
+      <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+    </a>
+  </header>
 
-<footer style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px; margin-top: 3%">
-  <p style="margin-left: 15%">&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
-  <p>Dirección: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
-  <p style="margin-right: 15%">Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
-</footer>
+  <div class="content-container">
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchText" (input)="filterCoaches()" placeholder="Buscar coaches...">
+    </div>
+
+    <mat-card class="card-component" *ngFor="let coach of filteredCoaches">
+      <div class="nombre-contacto">
+        <img src="assets/entrenador.png" alt="" width="50" height="50">
+        <mat-card-header>{{ coach.nombre }}</mat-card-header>
+        <a routerLink="/contact-coach">
+          <button class="color-boton">Contactar</button>
+        </a>
+      </div>
+      <div class="foto-informacion">
+        <img [src]="coach.fotoPerfil" alt="Foto de perfil de coach nutricional" width="250" height="300">
+        <div class="information">
+          <h3 class="nombre-coach">{{ coach.nombre }}</h3>
+          <h3>Especialidad: {{ coach.especialidad }}</h3>
+          <h3>Dirección: {{ coach.direccion }}</h3>
+          <h3>País: {{ coach.pais }}</h3>
+          <h3>Años de experiencia: {{ coach.aniosExperiencia }}</h3>
+          <h3>Certificaciones: {{ coach.certificaciones }}</h3>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <footer>
+    <p style="margin-left: 15%">&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
+    <p>Dirección: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
+    <p style="margin-right: 15%">Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
+  </footer>
+</div>

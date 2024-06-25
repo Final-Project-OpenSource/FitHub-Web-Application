@@ -1,0 +1,59 @@
+.nutritions-container {
+  margin: 1rem;
+}
+
+.nutrition-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nutrition-card {
+  flex: 1 1 calc(33% - 1rem);
+  min-width: 250px;
+  background-color: #EDF2F4;
+  border: 10px solid white;
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  overflow: visible;
+}
+
+.card-content img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px; /* Aumentado el margen derecho */
+  flex-shrink: 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.text-content mat-card-title,
+.text-content mat-card-content,
+.text-content p {
+  margin-top: 0;
+  margin-bottom: 10px; /* Asegurarse de que hay margen inferior */
+}
+
+.mat-card-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  align-self: flex-start;
+}

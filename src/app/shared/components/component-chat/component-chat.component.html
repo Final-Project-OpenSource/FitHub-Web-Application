@@ -5,9 +5,9 @@
 <div class="container">
   <div class="chat-list">
     <div class="search-input">
-      <mat-form-field>
+      <!--<mat-form-field>
         <input matInput placeholder="Buscar usuario..." [formControl]="searchControl" [matAutocomplete]="users">
-      </mat-form-field>
+      </mat-form-field>-->
       <mat-autocomplete #users="matAutocomplete">
         <mat-option *ngFor="let user of chatsUsers" [value]="user.firstname+user.lastname">
           {{user?.firstname}} {{user?.lastname}}
@@ -28,7 +28,7 @@
   </div>
   <div class="messages">
     <div class="messages-header">
-      <!--<h1> {{currentChat}}</h1>--> <h2 >{{currentChatUser}}</h2>
+      <h2 >{{currentChatUser}}</h2>
     </div>
     <mat-divider></mat-divider>
     <div class="chat-area">
@@ -38,12 +38,11 @@
           <span class="chat-date">{{message.date}} {{message.time}}</span>
         </div>
       </mat-list>
-
     </div>
     <div class="input-area">
       <mat-form-field appearance="outline">
-        <input matInput placeholder="Ingresa tu mensaje"/>
-        <button mat-icon-button matSuffix>
+        <input matInput placeholder="Ingresa tu mensaje" [(ngModel)]="messageContent"/>
+        <button mat-icon-button matSuffix (click)="sendMessage(); getMessagebyCurrentChat()">
           <mat-icon>send</mat-icon>
         </button>
       </mat-form-field>

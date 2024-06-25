@@ -4,7 +4,7 @@ import {MatButton, MatIconButton} from "@angular/material/button";
 import {Router} from "@angular/router";
 import {MatFormField, MatSuffix} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
-import {FormControl, ReactiveFormsModule} from "@angular/forms";
+import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatAutocomplete, MatAutocompleteTrigger, MatOption} from "@angular/material/autocomplete";
 import {UserService} from "../../../services/users/users.service";
 import {ChatsService} from "../../../services/chats/chats.service";
@@ -40,7 +40,8 @@ import {MessagesService} from "../../../services/messages/messages.service";
     MatSelectionList,
     MatIconButton,
     MatSuffix,
-    MatIcon
+    MatIcon,
+    FormsModule
   ],
   templateUrl: './component-chat.component.html',
   styleUrl: './component-chat.component.css'
@@ -57,7 +58,9 @@ export class ComponentChatComponent implements OnInit {
   searchText: string = '';
   user = '';
   currentChat = '';
+  messageContent: string = '';
   currentChatUser = 'Message';
+  currentChatReceivingUser = '';
   chatData: any ={
     id: this.currentChat,
     chatUser: this.user,
@@ -76,6 +79,7 @@ export class ComponentChatComponent implements OnInit {
   setCurrentChat(user: any, index: number): void {
     this.currentChat = this.userChats[index].id; // Establece el chat actual
     this.currentChatUser = `${user.firstname} ${user.lastname}`; // Establece el usuario del chat actual
+    this.currentChatReceivingUser = `${user.id}`;
   }
 
 // Obtiene los usuarios
@@ -109,6 +113,33 @@ export class ComponentChatComponent implements OnInit {
       (item.firstname.toLowerCase().includes(filteredValue) || // Filtra por nombre
         item.lastname.toLowerCase().includes(filteredValue)) // Filtra por apellido
     );
+  }
+
+  sendMessage() {
+    //const receivingUserId = 456; // Reemplaza con el ID del usuario que recibe el mensaje
+
+    if (this.messageContent.trim() !== '') {
+      this.messageService.postMessage(
+        this.currentChat,
+        this.user,
+        this.currentChatReceivingUser,
+        this.messageContent
+      ).subscribe(
+        response => {
+          console.log('Mensaje enviado con éxito', response);
+          // Manejar la respuesta del servidor si es necesario
+          // Por ejemplo, podrías limpiar el campo de texto después de enviar el mensaje
+          this.messageContent = '';
+        },
+        error => {
+          console.error('Error al enviar mensaje', error);
+          // Manejar errores si la solicitud falla
+        }
+      );
+    } else {
+      console.log('El mensaje está vacío');
+      // Manejar el caso donde el usuario intenta enviar un mensaje vacío
+    }
   }
 
 // Obtiene los chats del usuario por su ID
@@ -173,6 +204,7 @@ export class ComponentChatComponent implements OnInit {
           this.chatData = {
             id: this.currentChat,
             chatUser: res.userid2
+
           };
         } else {
           this.chatData = {

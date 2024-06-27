@@ -4,7 +4,6 @@ import {RegisterComponent} from "./public/components/register/register.component
 import {RecoveryPasswordComponent} from "./public/components/recovery-password/recovery-password.component";
 import {LandingPageComponent} from "./public/components/landing-page/landing-page.component";
 import {CoachInformationComponent} from "./coach/components/coach-information/coach-information.component";
-import {CoachContactComponent} from "./coach/components/coach-contact/coach-contact.component";
 import { MemberProfileComponent } from "./member/components/member-profile/member-profile.component";
 import { CoachProfileComponent } from "./coach/components/coach-profile/coach-profile.component";
 import { MemberDashboardComponent} from "./member/components/member-dashboard/member-dashboard.component";
@@ -24,7 +23,6 @@ export const routes: Routes = [
   {path: 'recovery-password', component: RecoveryPasswordComponent},
   {path: 'member-dashboard', component: MemberDashboardComponent},
   {path: 'search/coach', component: CoachInformationComponent},
-  {path: 'contact-coach', component: CoachContactComponent},
   {path: 'member-trainings', component: MemberTrainingsComponent},
   {path: 'member-profile', component: MemberProfileComponent},
   {path: 'member-progress', component: MemberProgressComponent},

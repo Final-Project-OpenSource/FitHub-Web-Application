@@ -1,9 +1,21 @@
 /* General Styles */
-body {
-  font-family: 'Roboto', sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
   background-color: #F4F4F4;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -59,7 +71,7 @@ body {
   min-height: 36px;
   border: none;
   border-radius: 4px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -91,11 +103,12 @@ body {
   height: 50px;
 }
 
-.nombre-contacto mat-card-header {
+.nombre-coach {
   margin-right: auto;
   background-color: #C2D4F7; /* Light blue */
   display: flex;
-  padding-bottom: 10px;
+  align-items: center;
+  padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -133,23 +146,18 @@ h3 {
   margin: 10px 0;
 }
 
-.nombre-coach {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-footer {
-  background-color: #333333;
+.footer {
+  background-color: #2F3E4D; /* Dark blue/gray */
   color: white;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   padding: 10px;
-  margin-top: auto; /* Empuja el footer al final del contenedor */
-  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  margin-top: auto; /* Ensures footer is pushed to the bottom */
 }
 
-footer p {
-  margin: 0;
+.footer p {
+  margin: 5px 0;
 }
 
 @media (max-width: 768px) {
@@ -206,12 +214,12 @@ footer p {
     font-size: 18px;
   }
 
-  footer {
+  .footer {
     flex-direction: column;
     align-items: center;
   }
 
-  footer p {
+  .footer p {
     font-size: 14px;
   }
 }
@@ -226,7 +234,7 @@ footer p {
     font-size: 16px;
   }
 
-  footer p {
+  .footer p {
     font-size: 12px;
   }
 }

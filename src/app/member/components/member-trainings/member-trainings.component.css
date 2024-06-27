@@ -1,152 +1,131 @@
-/* styles.css */
-
 /* General Styles */
 body {
-  background-color: #f5f5f5;
+  background-color: #F4F7FA; /* Background color similar to the screenshot */
   font-family: 'Arial', sans-serif;
-}
-
-/* Header Styles */
-.header {
-  background-color: #4c5a5b;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.header-icon {
-  width: 50px;
-  height: 50px;
-  margin-top: 15%;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Basic text color for better readability */
 }
 
 /* Content Styles */
 .content {
-  min-height: calc(100vh - 120px); /* Adjust based on header and footer height */
   display: flex;
   flex-direction: column;
-  background-color: #E0EAFD; /* Soft blue */
   padding: 20px;
 }
 
 .training-card {
-  background-color: #E0EAFD; /* Soft blue */
-  margin: 40px;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
+  background-color: #FFFFFF; /* White background for the main card */
+  margin: 10px 0; /* Vertical margin only */
+  border-radius: 15px; /* Smoother border radius */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Light shadow for cards */
   padding: 20px;
 }
 
 .training-buttons {
-  width: 180px;
-  margin-top: 1.5%;
-  margin-right: 5%;
-  background-color: #4D8ED6 !important; /* Blue button */
-  color: white !important;
+  width: auto; /* Auto width based on content */
+  padding: 10px 20px; /* Padded for touch friendliness */
+  margin: 5px; /* Spacing between buttons */
+  background-color: #007BFF; /* A shade of blue */
+  color: white;
   border-radius: 20px;
+  border: none; /* No border */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.training-buttons:hover {
+  background-color: #0056b3; /* Darken button on hover */
 }
 
 .training-card-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .buttons-section {
   display: flex;
-  flex-direction: row;
-  margin-top: 1.5%;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .question-box {
   display: flex;
-  flex-direction: row;
-  margin-top: 1.5%;
-  width: 600px;
+  align-items: center;
+  margin-bottom: 20px; /* More spacing */
 }
 
 .question-icon {
   width: 50px;
   height: 50px;
-  margin: 0 10px;
+  margin-right: 10px;
 }
 
 .routine-button {
-  background-color: #4D8ED6 !important;
-  color: white !important;
+  background-color: #E2E8F0; /* Light gray for less emphasis */
+  color: #1A202C; /* Dark gray text */
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.trainings-card-header {
-  background-color: #C2D4F7; /* Light blue */
-  margin: 40px 40px 0 40px;
-  height: 33px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-radius: 20px;
+.routine-button:hover {
+  background-color: #CBD5E0; /* Slightly darker on hover */
 }
 
+.trainings-card-header,
 .trainings-card-body {
-  background-color: #A6BDE6; /* Mid-tone blue */
-  margin: 0 40px 20px 40px;
+  background-color: #E2E8F0; /* Consistent light gray background */
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-radius: 20px;
 }
 
 .training-cards {
-  background-color: white;
-  margin: 10px;
+  background-color: #FFFFFF;
+  margin: 10px 0;
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid #4D8ED6; /* Border blue */
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Display row for image and text */
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .card-content {
   display: flex;
-  align-items: center;
+  flex-direction: row; /* Row direction for content */
 }
 
 .card-image {
-  height: 80px;
-  width: 100px;
+  height: 120px; /* Adjusted height */
+  width: 150px; /* Adjusted width */
   margin: 10px;
   border-radius: 10px;
 }
 
 .card-details {
-  margin-left: 2%;
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add some padding to the left */
 }
 
-.card-details h2,
-.card-details h3 {
-  margin: 5px 0;
-}
-
-/* Footer Styles */
 .footer {
-  background-color: #333333;
+  background-color: #2D3748; /* Darker shade for footer */
   color: white;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  margin-top: auto; /* Push the footer to the bottom */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  bottom: 0;
 }
 
 .footer p {
   margin: 5px;
+  text-align: center;
 }

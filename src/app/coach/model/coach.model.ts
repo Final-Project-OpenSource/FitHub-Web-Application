@@ -1,12 +1,11 @@
+import { User } from '../../shared/model/user.model';
+
 export class Coach {
   constructor(
-    public nombre: string,
-    public direccion: string,
-    public pais: string,
-    public telefono: string,
-    public fotoPerfil: string,
-    public especialidad: string,
-    public aniosExperiencia: string,
-    public certificaciones: string,
+    public id: number,
+    public yearsExperience: string,
+    public specialty: string,
+    public certification: string,
+    public user: User
   ) {}
 }

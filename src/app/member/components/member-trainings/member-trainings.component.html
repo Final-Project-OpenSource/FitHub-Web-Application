@@ -1,9 +1,9 @@
-<header class="header">
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
   <a routerLink="/member-dashboard" aria-label="Back to Dashboard">
-    <img src="assets/images/icons/back-icon.png" alt="Back" class="header-icon">
+    <img src="assets/images/icons/back-icon.png" alt="Back" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
   </a>
   <a routerLink="/member-profile" aria-label="Go to Profile">
-    <img src="assets/images/member/member-icon.png" alt="Profile" class="header-icon">
+    <img src="assets/images/member/member-icon.png" alt="Profile" style="width: 50px; height: 50px; margin-top: 15%">
   </a>
 </header>
 
@@ -12,7 +12,7 @@
     <section class="training-card-header">
       <div class="question-box">
         <img src="assets/images/member/member-icon.png" alt="Member Icon" class="question-icon">
-        <button mat-raised-button class="routine-button">¿Qué ejercicio vas a seguir hoy?</button>
+        <button mat-raised-button class="routine-button">{{ questionText }}</button>
       </div>
 
       <div class="buttons-section">
@@ -33,11 +33,12 @@
               <img [src]="diet.photo" alt="{{diet.title}}" class="card-image">
               <div class="card-details">
                 <h2>{{diet.title}}</h2>
-                <h3>Calories: {{diet.calories}}</h3>
+                <h3><strong>Calories:</strong> {{diet.calories}}</h3>
                 <p>{{diet.description}}</p>
-                <p>Ingredients: {{diet.ingredients}}</p>
-                <p>Restrictions: {{diet.restrictions}}</p>
-                <p>Health Goal: {{diet.goal_health}}</p>
+                <p><strong>Ingredients:</strong> {{diet.ingredients}}</p>
+                <p><strong>Restrictions:</strong> {{diet.restrictions}}</p>
+                <p><strong>Health Goal:</strong> {{diet.goal_health}}</p>
+                <p><strong>By Coach:</strong> {{diet.coach.user.name + " " + diet.coach.user.lastname}}</p>
               </div>
             </div>
           </mat-card>
@@ -50,9 +51,10 @@
               <img [src]="routine.photo" alt="{{routine.name}}" class="card-image">
               <div class="card-details">
                 <h2>{{routine.name}}</h2>
-                <h3>Exercise: {{routine.exercise}}</h3>
-                <h3>Repetitions: {{routine.repetitions}}</h3>
+                <h3><strong>Exercise:</strong> {{routine.exercise}}</h3>
+                <h3><strong>Repetitions:</strong> {{routine.repetitions}}</h3>
                 <p>{{routine.instruction}}</p>
+                <p><strong>By Coach:</strong> {{routine.coach.user.name + " " + routine.coach.user.lastname}}</p>
               </div>
             </div>
           </mat-card>

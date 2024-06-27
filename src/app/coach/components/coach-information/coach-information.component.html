@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="app-container">
   <header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
     <a routerLink="/member-trainings">
       <img src="assets/images/icons/back-icon.png" alt="member-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
@@ -15,29 +15,27 @@
 
     <mat-card class="card-component" *ngFor="let coach of filteredCoaches">
       <div class="nombre-contacto">
-        <img src="assets/entrenador.png" alt="" width="50" height="50">
-        <mat-card-header>{{ coach.nombre }}</mat-card-header>
-        <a routerLink="/contact-coach">
-          <button class="color-boton">Contactar</button>
-        </a>
+        <img src="assets/entrenador.png" alt="Icono del entrenador" class="entrenador-icon">
+        <div class="nombre-coach">{{ coach.user.name + ' ' + coach.user.lastname }}</div>
+        <button class="color-boton" (click)="selectCoach(coach)">Contactar</button>
       </div>
       <div class="foto-informacion">
-        <img [src]="coach.fotoPerfil" alt="Foto de perfil de coach nutricional" class="perfil-imagen">
+        <img [src]="coach.user.photo" alt="Foto de perfil de coach nutricional" class="perfil-imagen">
         <div class="information">
-          <h3 class="nombre-coach">{{ coach.nombre }}</h3>
-          <h3>Especialidad: {{ coach.especialidad }}</h3>
-          <h3>Dirección: {{ coach.direccion }}</h3>
-          <h3>País: {{ coach.pais }}</h3>
-          <h3>Años de experiencia: {{ coach.aniosExperiencia }}</h3>
-          <h3>Certificaciones: {{ coach.certificaciones }}</h3>
+          <h3 class="nombre-coach">{{ coach.user.name + ' ' + coach.user.lastname}}</h3>
+          <h3>Especialidad: {{ coach.specialty }}</h3>
+          <h3>Dirección: {{ coach.user.address }}</h3>
+          <h3>País: {{ coach.user.country }}</h3>
+          <h3>Años de experiencia: {{ coach.yearsExperience }}</h3>
+          <h3>Certificaciones: {{ coach.certification }}</h3>
         </div>
       </div>
     </mat-card>
   </div>
 
-  <footer>
-    <p style="margin-left: 15%">&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
+  <footer class="footer">
+    <p>&copy; 2024 FitHub Pro - Todos los derechos reservados</p>
     <p>Dirección: Av. de la Fuerza, 123, Ciudad Gimnasio</p>
-    <p style="margin-right: 15%">Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
+    <p>Teléfono: (555) 123-4567 | Email: info&commat;FitHubPro.com</p>
   </footer>
 </div>

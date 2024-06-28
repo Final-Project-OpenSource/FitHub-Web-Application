@@ -53,8 +53,16 @@ export class CoachMemberListComponent implements OnInit {
   }
 
   acceptRequest(requestId: string) {
-    console.log(`Accepted request with ID: ${requestId}`);
-    this.requests = this.requests.filter(request => request.id !== requestId);
+    //console.log(`Accepted request with ID: ${requestId}`);
+    //this.requests = this.requests.filter(request => request.id !== requestId);
+    
+    //Método para pasar las tarjetas de la lista de solicitudes a miembros actuales
+    const index = this.requests.findIndex(request => request.id === requestId);
+    if (index !== -1) {
+      const [acceptedRequest] = this.requests.splice(index, 1);
+      this.members.push(acceptedRequest);
+      console.log(`Accepted request with ID: ${requestId}`);
+    }
   }
 
   rejectRequest(requestId: string) {

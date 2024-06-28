@@ -16,4 +16,15 @@ export class UserService {
   getUsersbyId(index: any) {
     return this.http.get<any>(`${this.baseUrl}/users/${index}`);
   }
+
+  /*private apiUrl = `${environment.baseUrl}/users`;
+  constructor(private http: HttpClient) { }
+
+  getAllUsers(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}`);
+  }
+  getUsersbyId(userId: number): Observable<User[]> {
+    const url = `${this.apiUrl}/${userId}`;
+    return this.http.get<User[]>(url);
+  }*/
 }

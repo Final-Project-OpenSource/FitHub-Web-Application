@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Contactar a {{ data.nombre }}</h1>
+<div mat-dialog-content>
+  <textarea [(ngModel)]="message" placeholder="Escribe tu mensaje (opcional)"></textarea>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button (click)="sendRequest()">Confirmar Contacto</button>
+</div>

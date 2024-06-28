@@ -13,32 +13,63 @@
       <div class="user-info">
         <div class="images">
           <img class="user-icon" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt="icono representando al usuario">
-          <img class="user-image" src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" alt="imagen del usurio">
+          <img class="user-image" src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" alt="imagen del usuario">
         </div>
         <div class="info">
-          <h3> Perfil </h3>
-          <h3> Marcelo </h3>
-          <h3> Ribas </h3>
-          <button mat-button (click)="onLandingPageClick()"> Cerrar Sesion </button>
+          <h3>Perfil</h3>
+          <ng-container *ngIf="!isEditing">
+            <h3>{{ userProfile.nombre }}</h3>
+            <h3>{{ userProfile.apellido }}</h3>
+            <h3>{{ userProfile.pais }}</h3>
+            <h3>{{ userProfile.direccion }}</h3>
+            <h3>{{ userProfile.correo }}</h3>
+            <button mat-button (click)="toggleEdit()">Editar Información</button>
+          </ng-container>
+
+          <form *ngIf="isEditing" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input id="nombre" formControlName="nombre" />
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input id="apellido" formControlName="apellido" />
+            </div>
+            <div class="form-group">
+              <label for="pais">Pais:</label>
+              <input id="pais" formControlName="pais" />
+            </div>
+            <div class="form-group">
+              <label for="direccion">Dirección:</label>
+              <input id="direccion" formControlName="direccion" />
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo:</label>
+              <input id="correo" formControlName="correo" />
+            </div>
+            <button type="submit" mat-button>Guardar</button>
+          </form>
+          <button mat-button (click)="onLandingPageClick()">Cerrar Sesión</button>
         </div>
       </div>
-
     </div>
 
-    <div class="informacion-banner"> <h2> Informacion </h2></div>
+    <div class="informacion-banner">
+      <h2>Información</h2>
+    </div>
 
     <div class="aditional-info">
       <div class="achivements">
-        <h3> Logros obtenidos </h3>
+        <h3>Logros obtenidos</h3>
         <img src="https://cdn-icons-png.flaticon.com/512/188/188906.png" alt="icono del trofeo #1">
         <img src="https://cdn-icons-png.flaticon.com/512/432/432544.png" alt="icono del trofeo #2">
         <img src="https://cdn-icons-png.flaticon.com/512/3791/3791606.png" alt="icono del trofeo #3">
       </div>
       <div class="record">
-        <h3> Historial </h3>
-        <button mat-button> Rutina 1</button>
-        <button mat-button> Rutina 2</button>
-        <button mat-button> Rutina 3</button>
+        <h3>Historial</h3>
+        <button mat-button>Rutina 1</button>
+        <button mat-button>Rutina 2</button>
+        <button mat-button>Rutina 3</button>
       </div>
     </div>
   </div>

@@ -14,15 +14,21 @@
   <h2 style="background: #A9D3FF; color: white">Mis Rutinas</h2>
   <div class="routine-cards">
     <mat-card *ngFor="let routine of routines" class="routine-card">
-      <mat-card-title style="margin-left: 5%">{{ routine.title }}</mat-card-title>
-      <mat-card-subtitle style="margin-left: 5%">{{ routine.difficulty }}</mat-card-subtitle>
-      <mat-card-content>
-        <p style="margin-left: 3%">{{ routine.description }}</p>
-      </mat-card-content>
-      <mat-card-actions style="margin-left: 40%">
-        <button mat-button color="primary" (click)="editRoutine(routine)">Editar</button>
-        <button mat-button color="warn" (click)="deleteRoutine(routine.id)">Eliminar</button>
-      </mat-card-actions>
+      <div class="card-content">
+        <img mat-card-image [src]="routine.photo" alt="{{ routine.name }}">
+        <div class="text-content">
+          <mat-card-title>{{ routine.name }}</mat-card-title>
+          <mat-card-subtitle>{{ routine.exercise }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ routine.repetitions }}</mat-card-subtitle>
+          <mat-card-content>
+            <p>{{ routine.instruction }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="editRoutine(routine)">Editar</button>
+            <button mat-button color="warn" (click)="deleteRoutine(routine.id)">Eliminar</button>
+          </mat-card-actions>
+        </div>
+      </div>
     </mat-card>
   </div>
 
@@ -31,22 +37,28 @@
   <h2 style="background: #A9D3FF; color: white">Crear Nueva Rutina</h2>
   <form [formGroup]="routineForm" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="fill">
-      <mat-label>Título</mat-label>
-      <input matInput formControlName="title" required>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" required>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Dificultad</mat-label>
-      <mat-select formControlName="difficulty" required>
-        <mat-option value="Easy">Easy</mat-option>
-        <mat-option value="Medium">Medium</mat-option>
-        <mat-option value="Intense">Intense</mat-option>
-      </mat-select>
+      <mat-label>Ejercicio</mat-label>
+      <input matInput formControlName="exercise" required>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Descripción</mat-label>
-      <textarea matInput formControlName="description" required></textarea>
+      <mat-label>Repeticiones</mat-label>
+      <input matInput formControlName="repetitions" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Instrucción</mat-label>
+      <textarea matInput formControlName="instruction" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Foto (URL)</mat-label>
+      <input matInput formControlName="photo" required>
     </mat-form-field>
 
     <button mat-raised-button color="primary" type="submit">Crear Rutina</button>

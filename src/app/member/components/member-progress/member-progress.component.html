@@ -1,0 +1,25 @@
+<header style="background-color: #333333; color: white; display: flex; justify-content: space-between; padding: 10px;">
+  <a routerLink="/member-dashboard">
+    <img src="assets/images/icons/back-icon.png" alt="back-icon" style="width: 30px; height: 50px; margin-top: 15%; margin-left: 5%">
+  </a>
+  <a routerLink="/member-profile">
+    <img src="assets/images/member/member-icon.png" alt="member-icon" style="width: 50px; height: 50px; margin-top: 15%">
+  </a>
+</header>
+
+<h1>Progreso</h1>
+
+<mat-card class="card">
+  <mat-card-header class="name">
+    Coach: {{ coachName }}
+  </mat-card-header>
+  <ng-container *ngFor="let progress of progressList">
+    <mat-card-content>
+      <div class="notification">
+        <div class="message">{{ progress.content }}</div>
+        <div class="date">{{ progress.date | date: 'dd/MM/yy' }}</div>
+      </div>
+    </mat-card-content>
+  </ng-container>
+</mat-card>
+

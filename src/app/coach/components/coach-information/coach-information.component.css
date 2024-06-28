@@ -1,32 +1,80 @@
-.card-component{
-  display: flex;
-  background: linear-gradient( to bottom right, #4f86f7, #6ab0f3);
-  border-radius: 20px;
-  padding: 10px;
-  max-width: 60%;
-  margin: auto;
-  padding-bottom: 30px;
-  margin-top: 40px;
-
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F4F4F4;
 }
 
-.color-boton{
-  background-color: #3f51b5;
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #333333;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.back-icon,
+.member-icon {
+  width: 30px;
+  height: 50px;
+  margin-top: 15%;
+  margin-left: 5%;
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 20px;
+}
+
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.card-component {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #E0EAFD, #C2D4F7); /* Blue gradient */
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.color-boton {
+  background-color: #4D8ED6; /* Blue */
+  color: white;
   padding: 0.5em 1em;
   min-width: 64px;
   min-height: 36px;
-  box-sizing: border-box;
   border: none;
   border-radius: 4px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -41,105 +89,152 @@
   color: rgba(0, 0, 0, 0.87);
 }
 
-
-.nombre-contacto{
+.nombre-contacto {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
 }
 
-
-
-img {
+.entrenador-icon {
   margin-right: 10px;
   border-radius: 20px;
+  width: 50px;
+  height: 50px;
 }
 
-.nombre-contacto mat-card-header{
+.nombre-coach {
   margin-right: auto;
-  background-color: #D6EBFF;
-  align-items: center;
+  background-color: #C2D4F7; /* Light blue */
   display: flex;
-  padding-bottom: 10px;
+  align-items: center;
+  padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.nombre-contacto button{
+.nombre-contacto button {
   margin-left: 10px;
-
 }
 
-.foto-informacion{
-  background-color: #97B6F3;
+.foto-informacion {
+  background-color: #A6BDE6; /* Mid-tone blue */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 30px;
   border-radius: 20px;
 }
 
-.information{
-  padding: 5px;
-  padding-bottom: 20px;
+.perfil-imagen {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 20px;
 }
 
-.foto-informacion img {
-  margin-right: 10vh;
+.information {
+  padding: 20px;
 }
 
-h3{
-  align-items: center;
-  display: flex;
-  padding: 2px;
-  padding-left: 15px;
-  margin: 0;
+h3 {
+  background-color: #C2D4F7; /* Light blue */
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
 }
 
-.nombre-coach{
-  align-items: center;
-  display: flex;
-  font-size: 20px;
-  font-weight: bold;
+.footer {
+  background-color: #2F3E4D; /* Dark blue/gray */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  margin-top: auto; /* Ensures footer is pushed to the bottom */
 }
 
-
+.footer p {
+  margin: 5px 0;
+}
 
 @media (max-width: 768px) {
+  .back-icon,
+  .member-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .content-container {
+    padding: 10px;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
   .card-component {
     max-width: 100%;
-    padding: 5px;
-    padding-bottom: 20px;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: 10px;
   }
 
-  .color-boton {
-    min-width: auto;
-    min-height: auto;
-    font-size: 12px;
-  }
-
-  .nombre-contacto img {
-    width: 50px;
-    height: 50px;
+  .nombre-contacto {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nombre-contacto button {
-    margin-left: 5px;
-    font-size: 12px;
+    margin-left: 0;
+    margin-top: 10px;
   }
 
   .foto-informacion {
+    flex-direction: column;
     padding: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
   }
 
+  .perfil-imagen {
+    width: 100%;
+    height: auto;
+  }
+
+  .information {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .nombre-coach {
+    font-size: 18px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 14px;
+    padding: 5px;
+  }
 
   .nombre-coach {
     font-size: 16px;
-    padding: 15px;
+  }
+
+  .footer p {
+    font-size: 12px;
   }
 }

@@ -1,0 +1,84 @@
+/* Estilo para el título del diálogo */
+.mat-dialog-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo para el contenido del diálogo */
+.mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/* Estilo para el textarea */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Estilo para las acciones del diálogo */
+.mat-dialog-actions {
+  display: flex;
+  justify-content: center; /* Cambia a center para centrar los botones */
+  gap: 10px;
+  padding: 10px 0;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #4D8ED6; /* Color azul */
+  color: white;
+  padding: 10px 20px; /* Ajusta el padding para que los botones no sean tan grandes */
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #3a6c9e; /* Azul más oscuro al pasar el ratón */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #2e5279; /* Azul más oscuro al hacer clic */
+  transform: scale(1);
+}
+
+/* Media queries para hacer el diálogo responsive */
+@media (max-width: 768px) {
+  .mat-dialog-content {
+    gap: 15px;
+  }
+
+  textarea {
+    min-height: 80px;
+    font-size: 12px;
+  }
+
+  .mat-dialog-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}

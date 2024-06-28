@@ -1,8 +1,9 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #F4F4F4;
 }
 
 /* Encabezado */
@@ -11,18 +12,18 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .header h1 {
-  margin-left: 3%;
-  margin-top: 1%;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .header .member-icon {
   width: 50px;
   height: 50px;
-  margin-top: 15%;
   margin-right: 10px;
 }
 .header .chat-icon {
@@ -32,27 +33,21 @@ body {
 }
 
 
+
 /* Sección de frases */
 .sentence {
   line-height: 1.5;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.sentence .sentence-text-left {
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-left: 3%;
-  font-size: 30px;
-}
-
-.sentence .sentence-text-right {
-  margin-top: 2%;
-  margin-right: 5%;
-  font-size: 30px;
-  display: flex;
   align-items: center;
+  padding: 20px;
+  background-color: #E8F5E9;
+}
+
+.sentence .sentence-text-left,
+.sentence .sentence-text-right {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .sentence .member-days-count {
@@ -68,60 +63,64 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
   flex-wrap: wrap;
 }
 
 .sections-card {
-  width: 100%;
-  max-width: 500px;
-  height: 120px;
+  width: calc(50% - 20px);
+  max-width: 400px;
+  height: auto;
   border: 2px solid white;
   background-color: #93ACB5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px;
   text-align: center;
-  margin: 1rem;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .sections-card p {
-  font-size: 25px;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .sections-button {
+  margin-top: 10px;
   background-color: #3582CF !important;
   color: white !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 /* Notificaciones */
 .section-notifications {
   line-height: 1.5;
   background: #F2F4FF;
+  padding: 30px 0;
 }
 
 .notifications-title {
-  margin-top: 1%;
-  margin-left: 3%;
-  font-size: 30px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
 }
 
 .notifications-card {
   color: white;
   width: 80%;
-  height: auto;
-  margin-left: 10%;
-  align-items: center;
+  margin: 0 auto;
   background-color: #A9D3FF;
-  padding: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .member-notification {
-  margin-top: 3%;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
   height: auto;
   border: 6px solid white;
   background-color: #93ACB5;
@@ -130,15 +129,18 @@ body {
   justify-content: center;
   align-items: center;
   text-align: justify;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .member-notification .notification-title {
-  font-size: 25px;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
 }
 
 .member-notification .notification-content {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 /* Pie de página */
@@ -147,13 +149,13 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  margin-top: 2%;
+  padding: 10px 20px;
   flex-wrap: wrap;
 }
 
 .footer p {
   margin: 0;
+  font-size: 0.9rem;
 }
 
 .footer p:nth-child(1) {
@@ -171,34 +173,38 @@ body {
   }
 
   .header h1 {
-    margin-left: 0;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .header .member-icon {
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .sentence {
     flex-direction: column;
     align-items: center;
+    padding: 20px 10px;
   }
 
   .sentence .sentence-text-left,
   .sentence .sentence-text-right {
-    margin-left: 0;
-    margin-right: 0;
     text-align: center;
+    font-size: 1rem;
   }
 
   .sections {
     flex-direction: column;
     align-items: center;
+    padding: 20px 10px;
   }
 
-  .notifications-card {
+  .sections-card {
     width: 100%;
-    margin-left: 0;
+    max-width: 300px;
+  }
+
+  .section-notifications {
+    padding: 20px 10px;
   }
 
   .footer {
@@ -210,34 +216,31 @@ body {
     margin: 5px 0;
   }
 
-  .footer p:nth-child(1) {
-    margin-left: 0;
-  }
-
+  .footer p:nth-child(1),
   .footer p:nth-child(3) {
-    margin-right: 0;
+    margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .sentence .sentence-text-left,
   .sentence .sentence-text-right {
-    font-size: 20px;
+    font-size: 0.8rem;
   }
 
   .sections-card p {
-    font-size: 20px;
+    font-size: 1rem;
   }
 
   .notifications-title {
-    font-size: 24px;
+    font-size: 1.2rem;
   }
 
   .member-notification .notification-title {
-    font-size: 20px;
+    font-size: 1rem;
   }
 
   .member-notification .notification-content {
-    font-size: 16px;
+    font-size: 0.8rem;
   }
 }

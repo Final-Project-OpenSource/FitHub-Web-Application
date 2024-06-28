@@ -1,22 +1,14 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
-import {MatDivider} from "@angular/material/divider";
-import {MatFormField, MatLabel} from "@angular/material/form-field";
-import {MatOption, MatSelect} from "@angular/material/select";
-import {MatInput} from "@angular/material/input";
-import {MatButton} from "@angular/material/button";
-import {MatCard, MatCardActions, MatCardContent, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
-import {NgForOf} from "@angular/common";
-import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
-
-
-interface Routine {
-  id: number;
-  title: string;
-  difficulty: string;
-  description: string;
-}
-
+import { RouterLink } from "@angular/router";
+import { MatDivider } from "@angular/material/divider";
+import { MatFormField, MatLabel } from "@angular/material/form-field";
+import { MatOption, MatSelect } from "@angular/material/select";
+import { MatInput } from "@angular/material/input";
+import { MatButton } from "@angular/material/button";
+import { MatCard, MatCardActions, MatCardContent, MatCardSubtitle, MatCardTitle } from "@angular/material/card";
+import { NgForOf } from "@angular/common";
+import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { Routine } from "../../../shared/model/routine.model";
 
 @Component({
   selector: 'app-coach-plans',
@@ -39,7 +31,7 @@ interface Routine {
     MatLabel
   ],
   templateUrl: './coach-plans.component.html',
-  styleUrl: './coach-plans.component.css'
+  styleUrls: ['./coach-plans.component.css']
 })
 export class CoachPlansComponent {
   routines: Routine[] = [];
@@ -48,18 +40,15 @@ export class CoachPlansComponent {
 
   constructor(private fb: FormBuilder) {
     this.routineForm = this.fb.group({
-      title: [''],
-      difficulty: [''],
-      description: ['']
+      name: [''],
+      exercise: [''],
+      repetitions: [''],
+      instruction: [''],
+      photo: ['']
     });
   }
 
   ngOnInit(): void {
-    this.routines = [
-      { id: 1, title: 'Morning Routine', difficulty: 'Easy', description: 'A simple morning routine to start your day.' },
-      { id: 2, title: 'Strength Training', difficulty: 'Medium', description: 'A routine focused on building strength.' },
-      { id: 3, title: 'Cardio Blast', difficulty: 'Intense', description: 'An intense cardio workout to burn calories.' }
-    ];
     this.nextId = this.routines.length + 1;
   }
 

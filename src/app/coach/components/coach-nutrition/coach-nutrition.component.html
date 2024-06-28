@@ -14,18 +14,22 @@
   <h2 style="background: #A9D3FF; color: white">Mis Planes de Nutrición</h2>
   <div class="nutrition-cards">
     <mat-card *ngFor="let nutrition of nutritionPlan" class="nutrition-card">
-      <mat-card-title style="margin-left: 5%">{{ nutrition.title }}</mat-card-title>
-      <mat-card-subtitle style="margin-left: 5%">{{ nutrition.photo }}</mat-card-subtitle>
-      <mat-card-content>
-        <p style="margin-left: 3%">{{ nutrition.description }}</p>
-        <p style="margin-left: 3%">{{ nutrition.ingredients }}</p>
-        <p style="margin-left: 3%"> Calories: {{ nutrition.calories }}</p>
-        <p style="margin-left: 3%"> Goal: {{ nutrition.goal_health }}</p>
-      </mat-card-content>
-      <mat-card-actions style="margin-left: 40%">
-        <button mat-button color="primary" (click)="editNutritionPlan(nutrition)">Editar</button>
-        <button mat-button color="warn" (click)="deleteNutritionPlan(nutrition.id)">Eliminar</button>
-      </mat-card-actions>
+      <div class="card-content">
+        <img mat-card-image [src]="nutrition.photo" alt="{{ nutrition.title }}">
+        <div class="text-content">
+          <mat-card-title>{{ nutrition.title }}</mat-card-title>
+          <mat-card-content>
+            <p>{{ nutrition.description }}</p>
+            <p>{{ nutrition.ingredients }}</p>
+            <p>Calories: {{ nutrition.calories }}</p>
+            <p>Goal: {{ nutrition.goal_health }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="editNutritionPlan(nutrition)">Editar</button>
+            <button mat-button color="warn" (click)="deleteNutritionPlan(nutrition.id)">Eliminar</button>
+          </mat-card-actions>
+        </div>
+      </div>
     </mat-card>
   </div>
 
@@ -58,6 +62,11 @@
       <textarea matInput formControlName="goal_health" required></textarea>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit">Crear Rutina</button>
+    <mat-form-field appearance="fill">
+      <mat-label>Foto (URL)</mat-label>
+      <input matInput formControlName="photo" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Crear Plan de Nutrición</button>
   </form>
 </div>

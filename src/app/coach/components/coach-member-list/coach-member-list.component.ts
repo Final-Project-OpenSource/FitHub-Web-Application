@@ -36,26 +36,26 @@ export class CoachMemberListComponent implements OnInit {
 
   ngOnInit() {
     this.members = [
-      { id: '1', name: 'John Doe' },
-      { id: '2', name: 'Jane Smith' },
-      { id: '3', name: 'Alice Johnson' },
-      { id: '4', name: 'Michael Brown' },
-      { id: '5', name: 'Emily Davis' }
+      { id: '1', name: 'John Doe', phone: '956789123'},
+      { id: '2', name: 'Jane Smith', phone: '945634123'},
+      { id: '3', name: 'Alice Johnson', phone: '976123098' },
+      { id: '4', name: 'Michael Brown', phone: '945092345' },
+      { id: '5', name: 'Emily Davis', phone: '912045923' }
     ];
 
     this.requests = [
-      { id: '6', name: 'Robert Wilson' },
-      { id: '7', name: 'Linda Martinez' },
-      { id: '8', name: 'James Anderson' },
-      { id: '9', name: 'Patricia Taylor' },
-      { id: '10', name: 'Charles Thomas' }
+      { id: '6', name: 'Robert Wilson', phone: '934125659' },
+      { id: '7', name: 'Linda Martinez', phone: '923101378' },
+      { id: '8', name: 'James Anderson', phone: '930489210' },
+      { id: '9', name: 'Patricia Taylor', phone: '957350094' },
+      { id: '10', name: 'Charles Thomas', phone: '923065812' }
     ];
   }
 
   acceptRequest(requestId: string) {
     //console.log(`Accepted request with ID: ${requestId}`);
     //this.requests = this.requests.filter(request => request.id !== requestId);
-    
+
     //Método para pasar las tarjetas de la lista de solicitudes a miembros actuales
     const index = this.requests.findIndex(request => request.id === requestId);
     if (index !== -1) {

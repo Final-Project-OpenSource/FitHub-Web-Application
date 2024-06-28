@@ -17,6 +17,7 @@
   <div class="horizontal-scroll">
     <mat-card *ngFor="let member of members" class="member-card">
       <mat-card-title >{{ member.name }}</mat-card-title>
+      <mat-card-title >{{ member.phone }}</mat-card-title>
       <mat-card-actions>
         <button mat-button color="primary" (click)="manageMember(member.id)">Administrar</button>
       </mat-card-actions>
@@ -31,6 +32,7 @@
   <div class="horizontal-scroll">
     <mat-card *ngFor="let request of requests" class="request-card">
       <mat-card-title>{{ request.name }}</mat-card-title>
+      <mat-card-title >{{ request.phone }}</mat-card-title>
       <mat-card-actions>
         <button mat-button color="primary" (click)="acceptRequest(request.id)">Aceptar</button>
         <button mat-button color="warn" (click)="rejectRequest(request.id)">Rechazar</button>

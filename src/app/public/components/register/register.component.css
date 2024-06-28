@@ -41,10 +41,26 @@
   text-align: center;
 }
 
-.title{
+.title {
   font-size: 25px;
   background: linear-gradient(to bottom right, #4f86f7, #6ab0f3);
   border-radius: 10px;
   padding: 10px 0;
   color: white;
+}
+
+.mat-form-field {
+  display: block;
+  margin-bottom: 15px; /* Añadido para separar los campos */
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Añadido para separar los botones */
+  margin-top: 15px; /* Añadido para separar los botones de los campos */
+}
+
+.button-group button {
+  flex: 1;
+  margin: 0 5px; /* Añadido para dar espacio entre los botones */
 }

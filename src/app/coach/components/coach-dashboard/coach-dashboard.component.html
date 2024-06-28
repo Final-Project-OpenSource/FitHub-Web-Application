@@ -17,7 +17,7 @@
 <div class="sections">
   <mat-card class="sections-card">
     <p>Rutinas</p>
-    <button mat-raised-button class="sections-button" routerLink="/coach-plans">Administrar</button>
+    <button mat-raised-button class="sections-button" (click)="onManageRoutines()">Administrar</button>
   </mat-card>
   <mat-card class="sections-card">
     <p>Clientes</p>
@@ -32,22 +32,18 @@
 <div class="section-notifications">
   <h2 class="notifications-title">Notificaciones</h2>
   <mat-card class="notifications-card">
-
     <mat-card class="member-notification">
       <p class="notification-title">¡Solicitud de Nueva Rutina de Entrenamiento!</p>
       <p class="notification-content">¡Hola Coach! Luis Galindo ha solicitado una nueva rutina de entrenamiento. Revisa sus objetivos y crea un plan personalizado para él/ella.</p>
     </mat-card>
-
     <mat-card class="member-notification">
       <p class="notification-title">Luis Galindo ha Completado su Rutina</p>
       <p class="notification-content">¡Felicidades! Luis Galindo ha completado su rutina de entrenamiento. Puedes revisar su desempeño y ajustar su próximo plan de entrenamiento si es necesario.</p>
     </mat-card>
-
     <mat-card class="member-notification">
       <p class="notification-title">Nuevo Mensaje de Luis Galindo</p>
       <p class="notification-content">¡Hola Coach! Has recibido un nuevo mensaje de Luis Galindo. Lee el mensaje y responde lo antes posible para mantener una buena comunicación.</p>
     </mat-card>
-
   </mat-card>
 </div>
 

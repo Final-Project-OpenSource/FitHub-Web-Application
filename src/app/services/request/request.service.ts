@@ -11,17 +11,13 @@ export class RequestService {
 
   constructor(private http: HttpClient) {}
 
-  //Enviar Solicitud(Miembro)
-  sendRequest(coachId: number, message: string): Observable<any> {
-    const payload = { coachId, message };
+  //Contactar con el coach(Miembro)
+  contactCoach(coachId: number, memberId: number, message: string): Observable<any> {
+    const payload = { coachId, memberId, message };
     return this.http.post(`${this.apiUrl}/confirm-contact`, payload);
   }
-  //Aceptar Solicitud(Coach)
-  acceptRequest(requestId: number): Observable<any> {
-    return this.http.post(`${this.apiUrl}/accept-request`, { requestId });
-  }
-  //Rechazar Solicitud(Coach)
-  rejectRequest(requestId: number): Observable<any> {
-    return this.http.post(`${this.apiUrl}/reject-request`, { requestId });
+
+  getContacts(coachId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/by-coach/${coachId}`);
   }
 }

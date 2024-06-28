@@ -17,6 +17,7 @@
       <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Contraseña es requerida</mat-error>
       <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Contraseña debe tener al menos 6 caracteres</mat-error>
     </mat-form-field>
+    <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
     <div class="button-container">
       <button mat-raised-button color="primary" class="button-login" type="submit" [disabled]="loginForm.invalid">Ingresar</button>
       <button mat-raised-button color="accent" class="button-register" type="button" (click)="onRegisterClick()">Registrar</button>
@@ -25,4 +26,5 @@
       <button mat-button color="primary" type="button" (click)="onRecoveryPasswordClick()">¿Olvidaste tu contraseña?</button>
     </div>
   </form>
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
 </div>

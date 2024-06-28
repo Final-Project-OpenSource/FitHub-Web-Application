@@ -111,7 +111,7 @@ export class CoachInformationComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result?.event === 'confirm') {
-        this.requestService.sendRequest(result.coachId, result.message).subscribe(response => {
+        this.requestService.contactCoach(result.coachId, result.memberId, result.message).subscribe(response => {
           console.log('Contacto confirmado con el coach:', coach.user.name + ' ' + coach.user.lastname);
         });
       }

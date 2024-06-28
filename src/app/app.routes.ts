@@ -33,7 +33,7 @@ export const routes: Routes = [
   {path: 'coach-member-list', component: CoachMemberListComponent},
   {path: 'coach-plans', component: CoachPlansComponent},
   {path: 'coach-profile', component: CoachProfileComponent},
-  {path: 'coach-nutrition-plan', component: CoachNutritionComponent},
+  {path: 'coach-nutrition-plans', component: CoachNutritionComponent},
   {path: 'chat', component: ComponentChatComponent},
   {path: '', pathMatch: 'full', component: LandingPageComponent},
   {path: '*', pathMatch: 'full', redirectTo: 'home'}

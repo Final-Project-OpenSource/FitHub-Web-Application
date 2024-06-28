@@ -72,6 +72,10 @@ mat-error {
   width: 100%;
   margin-top: 10px;
 }
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
 
 @media (max-width: 611px) {
   .welcome-text h1 {

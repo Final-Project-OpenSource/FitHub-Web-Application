@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private apiUrl = 'https://fithub-service-18c8410f1ec5.herokuapp.com/api/v1/authentication';
-  private rolesUrl = 'https://fithub-service-18c8410f1ec5.herokuapp.com/api/v1/roles';
-  private userUrl = 'https://fithub-service-18c8410f1ec5.herokuapp.com/api/v1/users';
+  //private apiUrl = 'https://fithub-service-18c8410f1ec5.herokuapp.com/api/v1/authentication';
+  //private rolesUrl = 'https://fithub-service-18c8410f1ec5.herokuapp.com/api/v1/roles';
+  //private userUrl = 'https://fithub-service-18c8410f1ec5.herokuapp.com/api/v1/users';
+
+  private apiUrl = `${environment.baseUrl}/authentication`;
+  private rolesUrl = `${environment.baseUrl}/roles`
+  private userUrl = `${environment.baseUrl}/users`
+
   constructor(private http: HttpClient) { }
 
   signUp(userData: any): Observable<any> {
